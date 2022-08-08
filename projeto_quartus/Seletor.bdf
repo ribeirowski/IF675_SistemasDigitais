@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 480 696 496 864)
 	(text "INPUT" (rect 0 15 10 43)(font "Arial" (font_size 6))(vertical))
-	(text "S[0..2]" (rect 0 133 17 163)(font "Intel Clear" )(vertical))
+	(text "S[0..2]" (rect 0 133 17 162)(font "Intel Clear" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -246,7 +246,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 112 648 160)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Soma" (rect 3 37 30 54)(font "Intel Clear" ))
+	(text "1" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -285,7 +285,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 168 648 216)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Sub" (rect 3 37 20 54)(font "Intel Clear" ))
+	(text "2" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -324,7 +324,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 224 648 272)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Cmp_2" (rect 3 37 37 54)(font "Intel Clear" ))
+	(text "3" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -363,7 +363,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 280 648 328)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Same" (rect 3 37 30 54)(font "Intel Clear" ))
+	(text "4" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -402,7 +402,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 336 648 384)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Maior" (rect 3 37 30 54)(font "Intel Clear" ))
+	(text "5" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -441,7 +441,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 392 648 440)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Menor" (rect 3 37 33 54)(font "Intel Clear" ))
+	(text "6" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -480,7 +480,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 448 648 496)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "And" (rect 3 37 21 54)(font "Intel Clear" ))
+	(text "7" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -519,7 +519,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 584 504 648 552)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Xor" (rect 3 37 19 54)(font "Intel Clear" ))
+	(text "8" (rect 3 37 8 54)(font "Intel Clear" ))
 	(port
 		(pt 0 16)
 		(input)
