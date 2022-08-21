@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY and_5bits
+set_global_assignment -name TOP_LEVEL_ENTITY Circuito_Completo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:25:38  AUGUST 01, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -50,6 +50,13 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE decodificador_da_dor.bdf
+set_global_assignment -name BDF_FILE all_entradas.bdf
+set_global_assignment -name BDF_FILE comparadorZero.bdf
+set_global_assignment -name BDF_FILE comparadorSinal.bdf
+set_global_assignment -name BDF_FILE comparadorMenor.bdf
+set_global_assignment -name BDF_FILE comparadorMaior.bdf
+set_global_assignment -name BDF_FILE comparadorIgual.bdf
 set_global_assignment -name BDF_FILE xor_5bits.bdf
 set_global_assignment -name BDF_FILE and_5bits.bdf
 set_global_assignment -name BDF_FILE MUX_3S_3E_5bits.bdf
@@ -83,8 +90,11 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_2S_2E_1bit).vwf"
 set_global_assignment -name BDF_FILE MUX_Status_Sinal.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_Status_Sinal).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE xor_5bits.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE and_5bits.vwf
+set_global_assignment -name BDF_FILE Modulo_Cmp2.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Modulo_Cmp2).vwf"
+set_global_assignment -name BDF_FILE Circuito_Completo.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE and_5bits.vwf
