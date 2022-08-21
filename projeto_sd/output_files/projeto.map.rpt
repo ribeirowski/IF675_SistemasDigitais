@@ -1,0 +1,438 @@
+Analysis & Synthesis report for projeto
+Sun Aug 21 18:57:24 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Aug 21 18:57:24 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; projeto                                     ;
+; Top-level Entity Name              ; decodificador_nerfado                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 8                                           ;
+;     Total combinational functions  ; 8                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                 ;
++------------------------------------------------------------------+-----------------------+--------------------+
+; Option                                                           ; Setting               ; Default Value      ;
++------------------------------------------------------------------+-----------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7         ;                    ;
+; Top-level entity name                                            ; decodificador_nerfado ; projeto            ;
+; Family name                                                      ; Cyclone IV E          ; Cyclone V          ;
+; Use smart compilation                                            ; Off                   ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                    ; On                 ;
+; Enable compact report table                                      ; Off                   ; Off                ;
+; Restructure Multiplexers                                         ; Auto                  ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                   ; Off                ;
+; Preserve fewer node names                                        ; On                    ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001          ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993             ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto                  ; Auto               ;
+; Safe State Machine                                               ; Off                   ; Off                ;
+; Extract Verilog State Machines                                   ; On                    ; On                 ;
+; Extract VHDL State Machines                                      ; On                    ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                   ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000                  ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                   ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                    ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                    ; On                 ;
+; Parallel Synthesis                                               ; On                    ; On                 ;
+; DSP Block Balancing                                              ; Auto                  ; Auto               ;
+; NOT Gate Push-Back                                               ; On                    ; On                 ;
+; Power-Up Don't Care                                              ; On                    ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                   ; Off                ;
+; Remove Duplicate Registers                                       ; On                    ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                   ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                   ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                   ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                   ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                   ; Off                ;
+; Ignore SOFT Buffers                                              ; On                    ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                   ; Off                ;
+; Optimization Technique                                           ; Balanced              ; Balanced           ;
+; Carry Chain Length                                               ; 70                    ; 70                 ;
+; Auto Carry Chains                                                ; On                    ; On                 ;
+; Auto Open-Drain Pins                                             ; On                    ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                   ; Off                ;
+; Auto ROM Replacement                                             ; On                    ; On                 ;
+; Auto RAM Replacement                                             ; On                    ; On                 ;
+; Auto DSP Block Replacement                                       ; On                    ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto                  ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                  ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                    ; On                 ;
+; Strict RAM Replacement                                           ; Off                   ; Off                ;
+; Allow Synchronous Control Signals                                ; On                    ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                   ; Off                ;
+; Auto RAM Block Balancing                                         ; On                    ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                   ; Off                ;
+; Auto Resource Sharing                                            ; Off                   ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                   ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                   ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                   ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                    ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                   ; Off                ;
+; Timing-Driven Synthesis                                          ; On                    ; On                 ;
+; Report Parameter Settings                                        ; On                    ; On                 ;
+; Report Source Assignments                                        ; On                    ; On                 ;
+; Report Connectivity Checks                                       ; On                    ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                   ; Off                ;
+; Synchronization Register Chain Length                            ; 2                     ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation    ; Normal compilation ;
+; HDL message level                                                ; Level2                ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                   ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                  ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                  ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                   ; 100                ;
+; Clock MUX Protection                                             ; On                    ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                   ; Off                ;
+; Block Design Naming                                              ; Auto                  ; Auto               ;
+; SDC constraint protection                                        ; Off                   ; Off                ;
+; Synthesis Effort                                                 ; Auto                  ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                    ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                   ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium                ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto                  ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                    ; On                 ;
++------------------------------------------------------------------+-----------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
+; g2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/g2_4bits.bdf              ;         ;
+; decodificador_nerfado.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/decodificador_nerfado.bdf ;         ;
+; b2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/b2_4bits.bdf              ;         ;
+; a2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/a2_4bits.bdf              ;         ;
+; a1_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/a1_4bits.bdf              ;         ;
+; all_entradas_4bits.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/all_entradas_4bits.bdf    ;         ;
+; c2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/c2_4bits.bdf              ;         ;
+; d2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/d2_4bits.bdf              ;         ;
+; f2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/f2_4bits.bdf              ;         ;
+; e2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/sd/e2_4bits.bdf              ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 8               ;
+;                                             ;                 ;
+; Total combinational functions               ; 8               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 7               ;
+;     -- 3 input functions                    ; 1               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 8               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 18              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; Vector[2]~input ;
+; Maximum fan-out                             ; 8               ;
+; Total fan-out                               ; 60              ;
+; Average fan-out                             ; 1.36            ;
++---------------------------------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name           ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-----------------------+--------------+
+; |decodificador_nerfado     ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |decodificador_nerfado                 ; decodificador_nerfado ; work         ;
+;    |a1_4bits:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|a1_4bits:inst   ; a1_4bits              ; work         ;
+;    |a2_4bits:inst9|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|a2_4bits:inst9  ; a2_4bits              ; work         ;
+;    |b2_4bits:inst10|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|b2_4bits:inst10 ; b2_4bits              ; work         ;
+;    |c2_4bits:inst11|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|c2_4bits:inst11 ; c2_4bits              ; work         ;
+;    |d2_4bits:inst12|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|d2_4bits:inst12 ; d2_4bits              ; work         ;
+;    |e2_4bits:inst13|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|e2_4bits:inst13 ; e2_4bits              ; work         ;
+;    |f2_4bits:inst14|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|f2_4bits:inst14 ; f2_4bits              ; work         ;
+;    |g2_4bits:inst15|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |decodificador_nerfado|g2_4bits:inst15 ; g2_4bits              ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_lcell_comb ; 17                          ;
+;     normal            ; 17                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 7                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.76                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Aug 21 18:57:16 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file g2_4bits.bdf
+    Info (12023): Found entity 1: g2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file decod_4bits.bdf
+    Info (12023): Found entity 1: decod_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_nerfado.bdf
+    Info (12023): Found entity 1: decodificador_nerfado
+Info (12021): Found 1 design units, including 1 entities, in source file blah.bdf
+    Info (12023): Found entity 1: blah
+Info (12021): Found 1 design units, including 1 entities, in source file b2_4bits.bdf
+    Info (12023): Found entity 1: b2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file a2_4bits.bdf
+    Info (12023): Found entity 1: a2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file a1_4bits.bdf
+    Info (12023): Found entity 1: a1_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file g2.bdf
+    Info (12023): Found entity 1: g2
+Info (12021): Found 1 design units, including 1 entities, in source file g1.bdf
+    Info (12023): Found entity 1: g1
+Info (12021): Found 1 design units, including 1 entities, in source file f2.bdf
+    Info (12023): Found entity 1: f2
+Info (12021): Found 1 design units, including 1 entities, in source file f1.bdf
+    Info (12023): Found entity 1: f1
+Info (12021): Found 1 design units, including 1 entities, in source file e2.bdf
+    Info (12023): Found entity 1: e2
+Info (12021): Found 1 design units, including 1 entities, in source file e1.bdf
+    Info (12023): Found entity 1: e1
+Info (12021): Found 1 design units, including 1 entities, in source file d2.bdf
+    Info (12023): Found entity 1: d2
+Info (12021): Found 1 design units, including 1 entities, in source file d1.bdf
+    Info (12023): Found entity 1: d1
+Info (12021): Found 1 design units, including 1 entities, in source file c2.bdf
+    Info (12023): Found entity 1: c2
+Info (12021): Found 1 design units, including 1 entities, in source file c1.bdf
+    Info (12023): Found entity 1: c1
+Info (12021): Found 1 design units, including 1 entities, in source file b2.bdf
+    Info (12023): Found entity 1: b2
+Info (12021): Found 1 design units, including 1 entities, in source file a2.bdf
+    Info (12023): Found entity 1: a2
+Info (12021): Found 1 design units, including 1 entities, in source file a1.bdf
+    Info (12023): Found entity 1: a1
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_da_dor.bdf
+    Info (12023): Found entity 1: decodificador_da_dor
+Info (12021): Found 1 design units, including 1 entities, in source file all_entradas.bdf
+    Info (12023): Found entity 1: all_entradas
+Info (12021): Found 1 design units, including 1 entities, in source file comparadorzero.bdf
+    Info (12023): Found entity 1: comparadorZero
+Info (12021): Found 1 design units, including 1 entities, in source file comparadorsinal.bdf
+    Info (12023): Found entity 1: comparadorSinal
+Info (12021): Found 1 design units, including 1 entities, in source file comparadormenor.bdf
+    Info (12023): Found entity 1: comparadorMenor
+Info (12021): Found 1 design units, including 1 entities, in source file comparadormaior.bdf
+    Info (12023): Found entity 1: comparadorMaior
+Info (12021): Found 1 design units, including 1 entities, in source file comparadorigual.bdf
+    Info (12023): Found entity 1: comparadorIgual
+Info (12021): Found 1 design units, including 1 entities, in source file xor_5bits.bdf
+    Info (12023): Found entity 1: xor_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file and_5bits.bdf
+    Info (12023): Found entity 1: and_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_3s_3e_5bits.bdf
+    Info (12023): Found entity 1: MUX_3S_3E_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_5bits.bdf
+    Info (12023): Found entity 1: MUX_2S_2E_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file subtrator.bdf
+    Info (12023): Found entity 1: Subtrator
+Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_5bits.bdf
+    Info (12023): Found entity 1: ComplementoA2_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_5bits.bdf
+    Info (12023): Found entity 1: MUX_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4bits.bdf
+    Info (12023): Found entity 1: MUX_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_4bits.bdf
+    Info (12023): Found entity 1: ComplementoA2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file somador_supremo.bdf
+    Info (12023): Found entity 1: Somador_Supremo
+Info (12021): Found 1 design units, including 1 entities, in source file comparadorfull.bdf
+    Info (12023): Found entity 1: comparadorFull
+Info (12021): Found 1 design units, including 1 entities, in source file comparador.bdf
+    Info (12023): Found entity 1: comparador
+Info (12021): Found 1 design units, including 1 entities, in source file soma_4_bits.bdf
+    Info (12023): Found entity 1: Soma_4_bits
+Info (12021): Found 1 design units, including 1 entities, in source file seletor.bdf
+    Info (12023): Found entity 1: Seletor
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_1bit.bdf
+    Info (12023): Found entity 1: MUX_2S_2E_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file mux_status_sinal.bdf
+    Info (12023): Found entity 1: MUX_Status_Sinal
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_cmp2.bdf
+    Info (12023): Found entity 1: Modulo_Cmp2
+Info (12021): Found 1 design units, including 1 entities, in source file circuito_completo.bdf
+    Info (12023): Found entity 1: Circuito_Completo
+Info (12021): Found 1 design units, including 1 entities, in source file all_entradas_4bits.bdf
+    Info (12023): Found entity 1: all_entradas_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file c2_4bits.bdf
+    Info (12023): Found entity 1: c2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file d2_4bits.bdf
+    Info (12023): Found entity 1: d2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file f2_4bits.bdf
+    Info (12023): Found entity 1: f2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file e2_4bits.bdf
+    Info (12023): Found entity 1: e2_4bits
+Info (12127): Elaborating entity "decodificador_nerfado" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "c2"
+Warning (275080): Converted elements in bus name "C2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C2[3..0]" to "C23..0"
+Warning (275085): Found inconsistent dimensions for element "d2"
+Warning (275080): Converted elements in bus name "D2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D2[3..0]" to "D23..0"
+Warning (275085): Found inconsistent dimensions for element "e2"
+Warning (275080): Converted elements in bus name "E2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "E2[3..0]" to "E23..0"
+Warning (275085): Found inconsistent dimensions for element "f2"
+Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F2[3..0]" to "F23..0"
+Info (12128): Elaborating entity "a1_4bits" for hierarchy "a1_4bits:inst"
+Info (12128): Elaborating entity "all_entradas_4bits" for hierarchy "a1_4bits:inst|all_entradas_4bits:inst"
+Info (12128): Elaborating entity "a2_4bits" for hierarchy "a2_4bits:inst9"
+Info (12128): Elaborating entity "b2_4bits" for hierarchy "b2_4bits:inst10"
+Info (12128): Elaborating entity "c2_4bits" for hierarchy "c2_4bits:inst11"
+Warning (275085): Found inconsistent dimensions for element "c2"
+Warning (275080): Converted elements in bus name "C2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "C2[3..0]" to "C23..0"
+Info (12128): Elaborating entity "d2_4bits" for hierarchy "d2_4bits:inst12"
+Warning (275085): Found inconsistent dimensions for element "d2"
+Warning (275080): Converted elements in bus name "D2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D2[3..0]" to "D23..0"
+Info (12128): Elaborating entity "e2_4bits" for hierarchy "e2_4bits:inst13"
+Warning (275085): Found inconsistent dimensions for element "e2"
+Warning (275080): Converted elements in bus name "E2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "E2[3..0]" to "E23..0"
+Info (12128): Elaborating entity "f2_4bits" for hierarchy "f2_4bits:inst14"
+Warning (275085): Found inconsistent dimensions for element "f2"
+Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "F2[3..0]" to "F23..0"
+Info (12128): Elaborating entity "g2_4bits" for hierarchy "g2_4bits:inst15"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "b1_4bits" is stuck at GND
+    Warning (13410): Pin "c1_4bits" is stuck at GND
+    Warning (13410): Pin "g1_4bits" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Sun Aug 21 18:57:24 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:21
+
+

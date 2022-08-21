@@ -1,0 +1,358 @@
+|decodificador_nerfado
+a1_4bits <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => a1_4bits:inst.Vector[0]
+Vector[0] => a1_4bits:inst5.Vector[0]
+Vector[0] => a1_4bits:inst6.Vector[0]
+Vector[0] => a1_4bits:inst7.Vector[0]
+Vector[0] => a2_4bits:inst9.Vector[0]
+Vector[0] => b2_4bits:inst10.Vector[0]
+Vector[0] => c2_4bits:inst11.C20
+Vector[0] => d2_4bits:inst12.D20
+Vector[0] => e2_4bits:inst13.E20
+Vector[0] => f2_4bits:inst14.F20
+Vector[0] => g2_4bits:inst15.Vector[0]
+Vector[1] => a1_4bits:inst.Vector[1]
+Vector[1] => a1_4bits:inst5.Vector[1]
+Vector[1] => a1_4bits:inst6.Vector[1]
+Vector[1] => a1_4bits:inst7.Vector[1]
+Vector[1] => a2_4bits:inst9.Vector[1]
+Vector[1] => b2_4bits:inst10.Vector[1]
+Vector[1] => c2_4bits:inst11.C21
+Vector[1] => d2_4bits:inst12.D21
+Vector[1] => e2_4bits:inst13.E21
+Vector[1] => f2_4bits:inst14.F21
+Vector[1] => g2_4bits:inst15.Vector[1]
+Vector[2] => a1_4bits:inst.Vector[2]
+Vector[2] => a1_4bits:inst5.Vector[2]
+Vector[2] => a1_4bits:inst6.Vector[2]
+Vector[2] => a1_4bits:inst7.Vector[2]
+Vector[2] => a2_4bits:inst9.Vector[2]
+Vector[2] => b2_4bits:inst10.Vector[2]
+Vector[2] => c2_4bits:inst11.C22
+Vector[2] => d2_4bits:inst12.D22
+Vector[2] => e2_4bits:inst13.E22
+Vector[2] => f2_4bits:inst14.F22
+Vector[2] => g2_4bits:inst15.Vector[2]
+Vector[3] => a1_4bits:inst.Vector[3]
+Vector[3] => a1_4bits:inst5.Vector[3]
+Vector[3] => a1_4bits:inst6.Vector[3]
+Vector[3] => a1_4bits:inst7.Vector[3]
+Vector[3] => a2_4bits:inst9.Vector[3]
+Vector[3] => b2_4bits:inst10.Vector[3]
+Vector[3] => c2_4bits:inst11.C23
+Vector[3] => d2_4bits:inst12.D23
+Vector[3] => e2_4bits:inst13.E23
+Vector[3] => f2_4bits:inst14.F23
+Vector[3] => g2_4bits:inst15.Vector[3]
+b1_4bits <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+c1_4bits <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+d1_4bits <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+e1_4bits <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+f1_4bits <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+g1_4bits <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+a2_4bits <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+b2_4bits <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+c2_4bits <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+d2_4bits <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+e2_4bits <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+f2_4bits <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+g2_4bits <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|a1_4bits:inst
+a1_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|a1_4bits:inst|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|a1_4bits:inst5
+a1_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|a1_4bits:inst5|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|a1_4bits:inst6
+a1_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|a1_4bits:inst6|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|a1_4bits:inst7
+a1_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|a1_4bits:inst7|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|a2_4bits:inst9
+a2_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|a2_4bits:inst9|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|b2_4bits:inst10
+b2_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|b2_4bits:inst10|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|c2_4bits:inst11
+C2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+C23 => all_entradas_4bits:inst.Vector[3]
+C22 => all_entradas_4bits:inst.Vector[2]
+C21 => all_entradas_4bits:inst.Vector[1]
+C20 => all_entradas_4bits:inst.Vector[0]
+
+
+|decodificador_nerfado|c2_4bits:inst11|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|d2_4bits:inst12
+D2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D23 => all_entradas_4bits:inst.Vector[3]
+D22 => all_entradas_4bits:inst.Vector[2]
+D21 => all_entradas_4bits:inst.Vector[1]
+D20 => all_entradas_4bits:inst.Vector[0]
+
+
+|decodificador_nerfado|d2_4bits:inst12|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|e2_4bits:inst13
+E2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+E23 => all_entradas_4bits:inst.Vector[3]
+E22 => all_entradas_4bits:inst.Vector[2]
+E21 => all_entradas_4bits:inst.Vector[1]
+E20 => all_entradas_4bits:inst.Vector[0]
+
+
+|decodificador_nerfado|e2_4bits:inst13|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|f2_4bits:inst14
+F2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+F23 => all_entradas_4bits:inst.Vector[3]
+F22 => all_entradas_4bits:inst.Vector[2]
+F21 => all_entradas_4bits:inst.Vector[1]
+F20 => all_entradas_4bits:inst.Vector[0]
+
+
+|decodificador_nerfado|f2_4bits:inst14|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decodificador_nerfado|g2_4bits:inst15
+g2_4bits <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => all_entradas_4bits:inst.Vector[0]
+Vector[1] => all_entradas_4bits:inst.Vector[1]
+Vector[2] => all_entradas_4bits:inst.Vector[2]
+Vector[3] => all_entradas_4bits:inst.Vector[3]
+
+
+|decodificador_nerfado|g2_4bits:inst15|all_entradas_4bits:inst
+A2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Vector[0] => inst4.IN0
+Vector[0] => D.DATAIN
+Vector[1] => inst3.IN0
+Vector[1] => C.DATAIN
+Vector[2] => inst2.IN0
+Vector[2] => B.DATAIN
+Vector[3] => inst1.IN0
+Vector[3] => A.DATAIN
+A <= Vector[3].DB_MAX_OUTPUT_PORT_TYPE
+B2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B <= Vector[2].DB_MAX_OUTPUT_PORT_TYPE
+C2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+C <= Vector[1].DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D <= Vector[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
