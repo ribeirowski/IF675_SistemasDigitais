@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(FullAdder).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(FullAdder).vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(FullAdder).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(FullAdder).vwf.vt"</ttestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(MUX_2S_2E_1bit).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(MUX_2S_2E_1bit).vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(MUX_2S_2E_1bit).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(MUX_2S_2E_1bit).vwf.vt"</ttestbench_cmd>
 <fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work projeto.vo
-vlog -work work Waveform(FullAdder).vwf.vt
-vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FullAdder_vlg_vec_tst
+vlog -work work Waveform(MUX_2S_2E_1bit).vwf.vt
+vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MUX_2S_2E_1bit_vlg_vec_tst
 vcd file -direction projeto.msim.vcd
-vcd add -internal FullAdder_vlg_vec_tst/*
-vcd add -internal FullAdder_vlg_vec_tst/i1/*
+vcd add -internal MUX_2S_2E_1bit_vlg_vec_tst/*
+vcd add -internal MUX_2S_2E_1bit_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -24,11 +24,11 @@ quit -f
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work projeto.vo
-vlog -work work Waveform(FullAdder).vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FullAdder_vlg_vec_tst
+vlog -work work Waveform(MUX_2S_2E_1bit).vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MUX_2S_2E_1bit_vlg_vec_tst
 vcd file -direction projeto.msim.vcd
-vcd add -internal FullAdder_vlg_vec_tst/*
-vcd add -internal FullAdder_vlg_vec_tst/i1/*
+vcd add -internal MUX_2S_2E_1bit_vlg_vec_tst/*
+vcd add -internal MUX_2S_2E_1bit_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -76,7 +76,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("A")
+SIGNAL("Add")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -86,27 +86,7 @@ SIGNAL("A")
 	PARENT = "";
 }
 
-SIGNAL("B")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Carry_IN")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Carry_OUT")
+SIGNAL("Sinal")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -116,47 +96,84 @@ SIGNAL("Carry_OUT")
 	PARENT = "";
 }
 
-SIGNAL("Soma")
+SIGNAL("Sinal_Add")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
+	DIRECTION = INPUT;
 	PARENT = "";
 }
 
-TRANSITION_LIST("A")
+SIGNAL("Sinal_Sub")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Sub")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("Add")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 800.0;
 	}
 }
 
-TRANSITION_LIST("B")
+TRANSITION_LIST("Sinal")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("Carry_IN")
+TRANSITION_LIST("Sinal_Add")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 700.0;
+	}
+}
+
+TRANSITION_LIST("Sinal_Sub")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 650.0;
+	}
+}
+
+TRANSITION_LIST("Sub")
 {
 	NODE
 	{
@@ -167,27 +184,9 @@ TRANSITION_LIST("Carry_IN")
 	}
 }
 
-TRANSITION_LIST("Carry_OUT")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("Soma")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
 DISPLAY_LINE
 {
-	CHANNEL = "A";
+	CHANNEL = "Add";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -196,7 +195,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B";
+	CHANNEL = "Sub";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -205,7 +204,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Carry_IN";
+	CHANNEL = "Sinal_Add";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -214,7 +213,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Carry_OUT";
+	CHANNEL = "Sinal_Sub";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -223,7 +222,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Soma";
+	CHANNEL = "Sinal";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;

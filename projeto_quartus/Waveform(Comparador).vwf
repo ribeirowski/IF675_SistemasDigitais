@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(FullAdder).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(FullAdder).vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(FullAdder).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(FullAdder).vwf.vt"</ttestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(Comparador).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(Comparador).vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/Waveform(Comparador).vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/Waveform(Comparador).vwf.vt"</ttestbench_cmd>
 <fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work projeto.vo
-vlog -work work Waveform(FullAdder).vwf.vt
-vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FullAdder_vlg_vec_tst
+vlog -work work Waveform(Comparador).vwf.vt
+vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comparador_vlg_vec_tst
 vcd file -direction projeto.msim.vcd
-vcd add -internal FullAdder_vlg_vec_tst/*
-vcd add -internal FullAdder_vlg_vec_tst/i1/*
+vcd add -internal comparador_vlg_vec_tst/*
+vcd add -internal comparador_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -24,11 +24,11 @@ quit -f
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work projeto.vo
-vlog -work work Waveform(FullAdder).vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FullAdder_vlg_vec_tst
+vlog -work work Waveform(Comparador).vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comparador_vlg_vec_tst
 vcd file -direction projeto.msim.vcd
-vcd add -internal FullAdder_vlg_vec_tst/*
-vcd add -internal FullAdder_vlg_vec_tst/i1/*
+vcd add -internal comparador_vlg_vec_tst/*
+vcd add -internal comparador_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -86,6 +86,26 @@ SIGNAL("A")
 	PARENT = "";
 }
 
+SIGNAL("A_MAIOR")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("A_MENOR")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 SIGNAL("B")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -96,7 +116,17 @@ SIGNAL("B")
 	PARENT = "";
 }
 
-SIGNAL("Carry_IN")
+SIGNAL("IGUAIS")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("IGUAL")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -106,23 +136,23 @@ SIGNAL("Carry_IN")
 	PARENT = "";
 }
 
-SIGNAL("Carry_OUT")
+SIGNAL("MAIOR_A")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
+	DIRECTION = INPUT;
 	PARENT = "";
 }
 
-SIGNAL("Soma")
+SIGNAL("MENOR_A")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
+	DIRECTION = INPUT;
 	PARENT = "";
 }
 
@@ -131,11 +161,25 @@ TRANSITION_LIST("A")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("A_MAIOR")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("A_MENOR")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -144,30 +188,11 @@ TRANSITION_LIST("B")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("Carry_IN")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 600.0;
-	}
-}
-
-TRANSITION_LIST("Carry_OUT")
+TRANSITION_LIST("IGUAIS")
 {
 	NODE
 	{
@@ -176,12 +201,30 @@ TRANSITION_LIST("Carry_OUT")
 	}
 }
 
-TRANSITION_LIST("Soma")
+TRANSITION_LIST("IGUAL")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("MAIOR_A")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("MENOR_A")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -205,7 +248,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Carry_IN";
+	CHANNEL = "IGUAL";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -214,7 +257,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Carry_OUT";
+	CHANNEL = "MAIOR_A";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -223,10 +266,37 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Soma";
+	CHANNEL = "MENOR_A";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "A_MAIOR";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "A_MENOR";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "IGUAIS";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 0;
 }
 
