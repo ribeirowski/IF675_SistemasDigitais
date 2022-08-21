@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Aug 21 18:57:24 2022
+Analysis & Synthesis Status : Successful - Sun Aug 21 20:54:38 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : projeto
-Top-level Entity Name : decodificador_nerfado
+Top-level Entity Name : Circuito_Completo
 Family : Cyclone IV E
-Total logic elements : 8
-    Total combinational functions : 8
+Total logic elements : 148
+    Total combinational functions : 148
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 18
+Total pins : 61
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

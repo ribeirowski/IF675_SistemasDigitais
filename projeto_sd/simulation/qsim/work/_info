@@ -9,74 +9,260 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/enior/Desktop/projeto_SD-Thiago/projeto_quartus/simulation/qsim
-vCircuito_Completo
-Z0 !s110 1661118828
+vand_5bits
+Z0 !s110 1661126043
 !i10b 1
-!s100 NiaCj^mID`Ljz_5`8@LG:2
+!s100 ;G7@GcNd>KT@zId3EUe>l0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I0_Q0:kb8Yk4KXM^;^Ze2J1
+I5:gB^FW379`kin9R0`YAc2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/enior/Desktop/sd/simulation/qsim
-Z4 w1661118826
-Z5 8projeto.vo
-Z6 Fprojeto.vo
-!i122 12
-L0 32 3768
-Z7 OV;L;2020.1;71
+Z3 dC:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim
+w1661126042
+Z4 8projeto.vo
+Z5 Fprojeto.vo
+!i122 106
+L0 32 325
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1661118827.000000
-Z9 !s107 projeto.vo|
-Z10 !s90 -work|work|projeto.vo|
+Z7 !s108 1661126043.000000
+Z8 !s107 projeto.vo|
+Z9 !s90 -work|work|projeto.vo|
 !i113 1
-Z11 o-work work
-Z12 tCvgOpt 0
-n@circuito_@completo
-vCircuito_Completo_vlg_vec_tst
+Z10 o-work work
+Z11 tCvgOpt 0
+vand_5bits_vlg_vec_tst
 R0
 !i10b 1
-!s100 iEKL1mm4YnYTEb1jhZ74g1
+!s100 DWokIM7B1c[4<:S=E[7OL3
 R1
-I6[4GTzk9:k<aPmUKQ?`JA2
+I]Og?:3H5_2z_GWmbk;Y861
 R2
 R3
-R4
-8Circuito_Completo.vwf.vt
-FCircuito_Completo.vwf.vt
-!i122 13
-L0 30 301
-R7
+w1661126041
+Z12 8Circuito_Completo.vwf.vt
+Z13 FCircuito_Completo.vwf.vt
+!i122 107
+L0 30 20
+R6
 r1
 !s85 0
 31
-!s108 1661118828.000000
+R7
 !s107 Circuito_Completo.vwf.vt|
-!s90 -work|work|Circuito_Completo.vwf.vt|
+Z14 !s90 -work|work|Circuito_Completo.vwf.vt|
 !i113 1
+R10
 R11
+vCircuito_Completo
+Z15 !s110 1661126141
+!i10b 1
+!s100 e>FeDbcdS>l_71a>m<mjf1
+R1
+Ilg`8cUWW9l8A_TdILh3MY0
+R2
+R3
+Z16 w1661126140
+R4
+R5
+!i122 112
+L0 32 3768
+R6
+r1
+!s85 0
+31
+Z17 !s108 1661126141.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@circuito_@completo
+vCircuito_Completo_vlg_vec_tst
+R15
+!i10b 1
+!s100 S]@FO@X2YN?9a1fZMGIj]1
+R1
+I@g9BJ000RM[SjoYI:AB[h3
+R2
+R3
+w1661126139
 R12
+R13
+!i122 113
+L0 30 173
+R6
+r1
+!s85 0
+31
+R17
+Z18 !s107 Circuito_Completo.vwf.vt|
+R14
+!i113 1
+R10
+R11
 n@circuito_@completo_vlg_vec_tst
+vdecodificador_da_dor
+Z19 !s110 1661121825
+!i10b 1
+!s100 ^XQUBjnA3_7=TmokOgc063
+R1
+IC[ebeGbTzO]JeAG[H0?N^1
+R2
+R3
+w1661121824
+R4
+R5
+!i122 28
+L0 32 1012
+R6
+r1
+!s85 0
+31
+Z20 !s108 1661121825.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdecodificador_da_dor_vlg_vec_tst
+R19
+!i10b 1
+!s100 1F9`cl]d:H[^h78?X=]DT0
+R1
+I:m2m2Ha26l[:_aFm:fBlB1
+R2
+R3
+w1661121823
+8decodificador_da_dor.vwf.vt
+Fdecodificador_da_dor.vwf.vt
+!i122 29
+L0 30 115
+R6
+r1
+!s85 0
+31
+R20
+!s107 decodificador_da_dor.vwf.vt|
+!s90 -work|work|decodificador_da_dor.vwf.vt|
+!i113 1
+R10
+R11
+vdecodificador_nerfado
+Z21 !s110 1661123772
+!i10b 1
+!s100 9j6^nA8IB]iz;oaZHM30F1
+R1
+I;ej07_L04^FhP?z_6nU5Z3
+R2
+R3
+w1661123771
+R4
+R5
+!i122 46
+L0 32 486
+R6
+r1
+!s85 0
+31
+Z22 !s108 1661123772.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdecodificador_nerfado_vlg_vec_tst
+R21
+!i10b 1
+!s100 >16JAk>mCVZfXCDizPoLZ2
+R1
+I1Q61oWWl=NQ22o5OTEAlO1
+R2
+R3
+w1661123770
+8decodificador_nerfado.vwf.vt
+Fdecodificador_nerfado.vwf.vt
+!i122 47
+L0 30 81
+R6
+r1
+!s85 0
+31
+R22
+!s107 decodificador_nerfado.vwf.vt|
+!s90 -work|work|decodificador_nerfado.vwf.vt|
+!i113 1
+R10
+R11
 vhard_block
-R0
+R15
 !i10b 1
 !s100 [lz3le]gW^1U8j[:f?jDh1
 R1
 IM@T9PlXnIi^fRL_fI7_;42
 R2
 R3
+R16
 R4
 R5
-R6
-!i122 12
+!i122 112
 L0 3801 34
-R7
+R6
 r1
 !s85 0
 31
+R17
 R8
 R9
-R10
 !i113 1
+R10
 R11
-R12
+vModulo_Cmp2
+Z23 !s110 1661124916
+!i10b 1
+!s100 i?D1K9HOgW7h<`BRbA<Ag1
+R1
+IQ<z2UzXfzh:HYHgo9Hhc33
+R2
+R3
+w1661124915
+R4
+R5
+!i122 68
+L0 32 265
+R6
+r1
+!s85 0
+31
+Z24 !s108 1661124916.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@modulo_@cmp2
+vModulo_Cmp2_vlg_vec_tst
+R23
+!i10b 1
+!s100 d0IVaL^_9fi8NjkoPVz?P3
+R1
+IVG2eASJQTOQUz`5E0`c2Z0
+R2
+R3
+w1661124914
+8Waveform(Modulo_Cmp2).vwf.vt
+FWaveform(Modulo_Cmp2).vwf.vt
+!i122 69
+L0 30 46
+R6
+r1
+!s85 0
+31
+R24
+!s107 Waveform(Modulo_Cmp2).vwf.vt|
+!s90 -work|work|Waveform(Modulo_Cmp2).vwf.vt|
+!i113 1
+R10
+R11
+n@modulo_@cmp2_vlg_vec_tst

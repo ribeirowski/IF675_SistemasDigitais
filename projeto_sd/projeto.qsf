@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY decodificador_nerfado
+set_global_assignment -name TOP_LEVEL_ENTITY Circuito_Completo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:25:38  AUGUST 01, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -120,6 +120,9 @@ set_global_assignment -name BDF_FILE c2_4bits.bdf
 set_global_assignment -name BDF_FILE d2_4bits.bdf
 set_global_assignment -name BDF_FILE f2_4bits.bdf
 set_global_assignment -name BDF_FILE e2_4bits.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Circuito_Completo_out.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE decodificador_da_dor.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE decodificador_nerfado.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
