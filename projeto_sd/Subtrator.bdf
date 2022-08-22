@@ -1339,10 +1339,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 808 360)
 )
 (connector
-	(pt 832 400)
-	(pt 832 608)
-)
-(connector
 	(pt 400 408)
 	(pt 416 408)
 )
@@ -1413,48 +1409,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 816 448)
-	(pt 848 448)
-)
-(connector
-	(pt 848 448)
-	(pt 872 448)
-)
-(connector
 	(pt 848 368)
 	(pt 848 440)
-)
-(connector
-	(pt 816 464)
-	(pt 848 464)
-)
-(connector
-	(pt 848 440)
-	(pt 848 448)
-)
-(connector
-	(pt 848 448)
-	(pt 848 464)
-)
-(connector
-	(pt 816 480)
-	(pt 848 480)
-)
-(connector
-	(pt 848 480)
-	(pt 872 480)
-)
-(connector
-	(pt 848 464)
-	(pt 848 472)
-)
-(connector
-	(pt 848 472)
-	(pt 848 480)
-)
-(connector
-	(pt 848 480)
-	(pt 848 552)
 )
 (connector
 	(pt 632 632)
@@ -1501,17 +1457,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 952 432)
 	(pt 1184 432)
-)
-(connector
-	(pt 1576 360)
-	(pt 1632 360)
-	(bus)
-)
-(connector
-	(text "S[4..0],S[3..0]" (rect 1710 344 1771 361)(font "Intel Clear" ))
-	(pt 1632 360)
-	(pt 1808 360)
-	(bus)
 )
 (connector
 	(pt 496 440)
@@ -1628,14 +1573,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1056 464)
 )
 (connector
-	(pt 848 472)
-	(pt 960 472)
-)
-(connector
-	(pt 848 464)
-	(pt 960 464)
-)
-(connector
 	(pt 936 272)
 	(pt 1056 272)
 	(bus)
@@ -1689,14 +1626,53 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2176 384)
 	(bus)
 )
+(connector
+	(text "S[4..0]" (rect 1710 344 1739 361)(font "Intel Clear" ))
+	(pt 1632 360)
+	(pt 1808 360)
+	(bus)
+)
+(connector
+	(text "S[3..0]" (rect 1601 344 1630 361)(font "Intel Clear" ))
+	(pt 1576 360)
+	(pt 1632 360)
+	(bus)
+)
+(connector
+	(pt 832 472)
+	(pt 960 472)
+)
+(connector
+	(pt 832 400)
+	(pt 832 472)
+)
+(connector
+	(pt 832 472)
+	(pt 832 608)
+)
+(connector
+	(pt 816 464)
+	(pt 960 464)
+)
+(connector
+	(pt 816 480)
+	(pt 872 480)
+)
+(connector
+	(pt 848 552)
+	(pt 848 448)
+)
+(connector
+	(pt 816 448)
+	(pt 848 448)
+)
+(connector
+	(pt 848 448)
+	(pt 872 448)
+)
 (junction (pt 272 440))
 (junction (pt 272 552))
 (junction (pt 792 272))
-(junction (pt 848 440))
-(junction (pt 848 448))
-(junction (pt 848 464))
-(junction (pt 848 472))
-(junction (pt 848 480))
 (junction (pt 768 632))
 (junction (pt 2064 400))
 (junction (pt 2064 432))
@@ -1719,3 +1695,5 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 832 400))
 (junction (pt 856 400))
 (junction (pt 632 472))
+(junction (pt 832 472))
+(junction (pt 848 448))

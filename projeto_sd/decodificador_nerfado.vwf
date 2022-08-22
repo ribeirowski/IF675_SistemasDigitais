@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/decodificador_nerfado.vwf" --testbench_file="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim/decodificador_nerfado.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/decodificador_nerfado.vwf" --testbench_file="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim/decodificador_nerfado.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim/" projeto -c projeto</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim/" projeto -c projeto</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/decodificador_nerfado.vwf" --testbench_file="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim/decodificador_nerfado.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/decodificador_nerfado.vwf" --testbench_file="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim/decodificador_nerfado.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim/" projeto -c projeto</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim/" projeto -c projeto</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work projeto.vo
@@ -397,11 +397,10 @@ TRANSITION_LIST("Vector[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 200.0;
+		LEVEL 1 FOR 500.0;
 		LEVEL 0 FOR 300.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
 	}
 }
 
@@ -410,10 +409,13 @@ TRANSITION_LIST("Vector[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 400.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 200.0;
 		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
 	}
 }
 
@@ -422,9 +424,11 @@ TRANSITION_LIST("Vector[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100.0;
-		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 600.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 400.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 100.0;
 	}
 }
 
@@ -433,12 +437,11 @@ TRANSITION_LIST("Vector[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 200.0;
 		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 200.0;
+		LEVEL 1 FOR 500.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
 	}
 }
 
