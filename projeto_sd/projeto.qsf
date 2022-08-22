@@ -113,7 +113,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY and_5bits
+set_global_assignment -name TOP_LEVEL_ENTITY Circuito_Completo
 
 # Fitter Assignments
 # ==================
@@ -198,17 +198,7 @@ set_location_assignment PIN_J22 -to F_F2
 set_location_assignment PIN_H22 -to F_G2
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Subtrator).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorSinal.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Subtrator.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE xor_5bits.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Somador_Supremo.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Modulo_Cmp2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE decodificador_nerfado.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE decodificador_da_dor.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorMenor.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorMaior.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorIgual.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE and_5bits.vwf
