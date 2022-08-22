@@ -97,6 +97,12 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Circuito_Completo.vwf
 
 # Pin & Location Assignments
 # ==========================
+set_location_assignment PIN_AC26 -to A[0]
+set_location_assignment PIN_AD26 -to A[1]
+set_location_assignment PIN_AB26 -to A[2]
+set_location_assignment PIN_AC25 -to A[3]
+set_location_assignment PIN_AB25 -to A[4]
+set_location_assignment PIN_AB28 -to B[0]
 
 # Classic Timing Assignments
 # ==========================
@@ -133,6 +139,63 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 
 # end ENTITY(Circuito_Completo)
 # -----------------------------
+set_location_assignment PIN_AC28 -to B[1]
+set_location_assignment PIN_AC27 -to B[2]
+set_location_assignment PIN_AD27 -to B[3]
+set_location_assignment PIN_AB27 -to B[4]
+set_location_assignment PIN_Y23 -to S[2]
+set_location_assignment PIN_Y24 -to S[1]
+set_location_assignment PIN_AA22 -to S[0]
+set_location_assignment PIN_F17 -to Led
+set_location_assignment PIN_E21 -to F[0]
+set_location_assignment PIN_E22 -to F[1]
+set_location_assignment PIN_E25 -to F[2]
+set_location_assignment PIN_E24 -to F[3]
+set_location_assignment PIN_H21 -to F[4]
+set_location_assignment PIN_G17 -to Sinal_A
+set_location_assignment PIN_F18 -to Sinal_B
+set_location_assignment PIN_AD17 -to A_A1
+set_location_assignment PIN_AE17 -to A_B1
+set_location_assignment PIN_AG17 -to A_C1
+set_location_assignment PIN_AH17 -to A_D1
+set_location_assignment PIN_AF17 -to A_E1
+set_location_assignment PIN_AG18 -to A_F1
+set_location_assignment PIN_AA14 -to A_G1
+set_location_assignment PIN_AA17 -to A_A2
+set_location_assignment PIN_AB16 -to A_B2
+set_location_assignment PIN_AA16 -to A_C2
+set_location_assignment PIN_AB17 -to A_D2
+set_location_assignment PIN_AB15 -to A_E2
+set_location_assignment PIN_AA15 -to A_F2
+set_location_assignment PIN_AC17 -to A_G2
+set_location_assignment PIN_AD18 -to B_A1
+set_location_assignment PIN_AC18 -to B_B1
+set_location_assignment PIN_AB18 -to B_C1
+set_location_assignment PIN_AH19 -to B_D1
+set_location_assignment PIN_AG19 -to B_E1
+set_location_assignment PIN_AF18 -to B_F1
+set_location_assignment PIN_AH18 -to B_G1
+set_location_assignment PIN_AB19 -to B_A2
+set_location_assignment PIN_AA19 -to B_B2
+set_location_assignment PIN_AG21 -to B_C2
+set_location_assignment PIN_AH21 -to B_D2
+set_location_assignment PIN_AE19 -to B_E2
+set_location_assignment PIN_AF19 -to B_F2
+set_location_assignment PIN_AE18 -to B_G2
+set_location_assignment PIN_M24 -to F_A1
+set_location_assignment PIN_Y22 -to F_B1
+set_location_assignment PIN_W21 -to F_C1
+set_location_assignment PIN_W22 -to F_D1
+set_location_assignment PIN_W25 -to F_E1
+set_location_assignment PIN_U23 -to F_F1
+set_location_assignment PIN_U24 -to F_G1
+set_location_assignment PIN_G18 -to F_A2
+set_location_assignment PIN_F22 -to F_B2
+set_location_assignment PIN_E17 -to F_C2
+set_location_assignment PIN_L26 -to F_D2
+set_location_assignment PIN_L25 -to F_E2
+set_location_assignment PIN_J22 -to F_F2
+set_location_assignment PIN_H22 -to F_G2
 set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Subtrator).vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorSinal.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
