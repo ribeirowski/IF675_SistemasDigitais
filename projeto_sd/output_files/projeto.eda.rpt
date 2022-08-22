@@ -1,5 +1,5 @@
 EDA Netlist Writer report for projeto
-Sun Aug 21 20:55:40 2022
+Mon Aug 22 14:30:52 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Aug 21 20:55:40 2022 ;
+; EDA Netlist Writer Status ; Successful - Mon Aug 22 14:30:52 2022 ;
 ; Revision Name             ; projeto                               ;
-; Top-level Entity Name     ; Circuito_Completo                     ;
+; Top-level Entity Name     ; and_5bits                             ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Simulation Generated Files                                                        ;
-+-----------------------------------------------------------------------------------+
-; Generated Files                                                                   ;
-+-----------------------------------------------------------------------------------+
-; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim//projeto.vo ;
-+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                ;
++-------------------------------------------------------------------------------------------+
+; Generated Files                                                                           ;
++-------------------------------------------------------------------------------------------+
+; C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim//projeto.vo ;
++-------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Aug 21 20:55:39 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim/ projeto -c projeto
+    Info: Processing started: Mon Aug 22 14:30:51 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim/ projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file projeto.vo in folder "C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file projeto.vo in folder "C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Sun Aug 21 20:55:40 2022
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Mon Aug 22 14:30:52 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

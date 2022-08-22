@@ -19,127 +19,36 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/21/2022 19:43:43"
+// Generated on "08/22/2022 14:22:31"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          decodificador_da_dor
+// Verilog Test Bench (with test vectors) for design :                          comparadorMenor
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module decodificador_da_dor_vlg_vec_tst();
+module comparadorMenor_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg add;
-reg sub;
-reg [4:0] Vector;
+reg [3:0] A;
+reg [3:0] B;
+reg Sinal_A;
+reg Sinal_B;
 // wires                                               
-wire a1;
-wire a2;
-wire b1;
-wire b2;
-wire c1;
-wire c2;
-wire d1;
-wire d2;
-wire e1;
-wire e2;
-wire f1;
-wire f2;
-wire g1;
-wire g2;
+wire OUT;
 
 // assign statements (if any)                          
-decodificador_da_dor i1 (
+comparadorMenor i1 (
 // port map - connection between master ports and signals/registers   
-	.a1(a1),
-	.a2(a2),
-	.add(add),
-	.b1(b1),
-	.b2(b2),
-	.c1(c1),
-	.c2(c2),
-	.d1(d1),
-	.d2(d2),
-	.e1(e1),
-	.e2(e2),
-	.f1(f1),
-	.f2(f2),
-	.g1(g1),
-	.g2(g2),
-	.sub(sub),
-	.Vector(Vector)
+	.A(A),
+	.B(B),
+	.OUT(OUT),
+	.Sinal_A(Sinal_A),
+	.Sinal_B(Sinal_B)
 );
 initial 
 begin 
 #1000000 $finish;
-end 
-
-// add
-initial
-begin
-	add = 1'b0;
-	add = #600000 1'b1;
-end 
-
-// sub
-initial
-begin
-	sub = 1'b1;
-	sub = #400000 1'b0;
-end 
-// Vector[ 4 ]
-initial
-begin
-	Vector[4] = 1'b1;
-	Vector[4] = #100000 1'b0;
-	Vector[4] = #100000 1'b1;
-	Vector[4] = #300000 1'b0;
-	Vector[4] = #100000 1'b1;
-	Vector[4] = #100000 1'b0;
-	Vector[4] = #100000 1'b1;
-	Vector[4] = #100000 1'b0;
-end 
-// Vector[ 3 ]
-initial
-begin
-	Vector[3] = 1'b0;
-	Vector[3] = #100000 1'b1;
-	Vector[3] = #100000 1'b0;
-	Vector[3] = #200000 1'b1;
-	Vector[3] = #400000 1'b0;
-end 
-// Vector[ 2 ]
-initial
-begin
-	Vector[2] = 1'b0;
-	Vector[2] = #100000 1'b1;
-	Vector[2] = #200000 1'b0;
-	Vector[2] = #100000 1'b1;
-	Vector[2] = #100000 1'b0;
-	Vector[2] = #100000 1'b1;
-	Vector[2] = #300000 1'b0;
-end 
-// Vector[ 1 ]
-initial
-begin
-	Vector[1] = 1'b1;
-	Vector[1] = #100000 1'b0;
-	Vector[1] = #200000 1'b1;
-	Vector[1] = #200000 1'b0;
-	Vector[1] = #400000 1'b1;
-end 
-// Vector[ 0 ]
-initial
-begin
-	Vector[0] = 1'b1;
-	Vector[0] = #100000 1'b0;
-	Vector[0] = #100000 1'b1;
-	Vector[0] = #100000 1'b0;
-	Vector[0] = #100000 1'b1;
-	Vector[0] = #100000 1'b0;
-	Vector[0] = #100000 1'b1;
-	Vector[0] = #200000 1'b0;
 end 
 endmodule
 

@@ -19,93 +19,36 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/21/2022 20:16:10"
+// Generated on "08/22/2022 14:23:35"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          decodificador_nerfado
+// Verilog Test Bench (with test vectors) for design :                          comparadorMenor
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module decodificador_nerfado_vlg_vec_tst();
+module comparadorMenor_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] Vector;
+reg [3:0] A;
+reg [3:0] B;
+reg Sinal_A;
+reg Sinal_B;
 // wires                                               
-wire a1_4bits;
-wire a2_4bits;
-wire b1_4bits;
-wire b2_4bits;
-wire c1_4bits;
-wire c2_4bits;
-wire d1_4bits;
-wire d2_4bits;
-wire e1_4bits;
-wire e2_4bits;
-wire f1_4bits;
-wire f2_4bits;
-wire g1_4bits;
-wire g2_4bits;
+wire OUT;
 
 // assign statements (if any)                          
-decodificador_nerfado i1 (
+comparadorMenor i1 (
 // port map - connection between master ports and signals/registers   
-	.a1_4bits(a1_4bits),
-	.a2_4bits(a2_4bits),
-	.b1_4bits(b1_4bits),
-	.b2_4bits(b2_4bits),
-	.c1_4bits(c1_4bits),
-	.c2_4bits(c2_4bits),
-	.d1_4bits(d1_4bits),
-	.d2_4bits(d2_4bits),
-	.e1_4bits(e1_4bits),
-	.e2_4bits(e2_4bits),
-	.f1_4bits(f1_4bits),
-	.f2_4bits(f2_4bits),
-	.g1_4bits(g1_4bits),
-	.g2_4bits(g2_4bits),
-	.Vector(Vector)
+	.A(A),
+	.B(B),
+	.OUT(OUT),
+	.Sinal_A(Sinal_A),
+	.Sinal_B(Sinal_B)
 );
 initial 
 begin 
 #1000000 $finish;
-end 
-// Vector[ 3 ]
-initial
-begin
-	Vector[3] = 1'b1;
-	Vector[3] = #500000 1'b0;
-	Vector[3] = #300000 1'b1;
-	Vector[3] = #100000 1'b0;
-end 
-// Vector[ 2 ]
-initial
-begin
-	Vector[2] = 1'b0;
-	Vector[2] = #100000 1'b1;
-	Vector[2] = #200000 1'b0;
-	Vector[2] = #200000 1'b1;
-	Vector[2] = #100000 1'b0;
-	Vector[2] = #200000 1'b1;
-	Vector[2] = #100000 1'b0;
-end 
-// Vector[ 1 ]
-initial
-begin
-	Vector[1] = 1'b0;
-	Vector[1] = #100000 1'b1;
-	Vector[1] = #400000 1'b0;
-	Vector[1] = #200000 1'b1;
-	Vector[1] = #200000 1'b0;
-end 
-// Vector[ 0 ]
-initial
-begin
-	Vector[0] = 1'b1;
-	Vector[0] = #200000 1'b0;
-	Vector[0] = #100000 1'b1;
-	Vector[0] = #500000 1'b0;
-	Vector[0] = #100000 1'b1;
 end 
 endmodule
 

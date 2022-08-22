@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto
-Sun Aug 21 20:54:38 2022
+Mon Aug 22 14:29:00 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Aug 21 20:54:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 22 14:29:00 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; projeto                                     ;
-; Top-level Entity Name              ; Circuito_Completo                           ;
+; Top-level Entity Name              ; and_5bits                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 148                                         ;
-;     Total combinational functions  ; 148                                         ;
+; Total logic elements               ; 5                                           ;
+;     Total combinational functions  ; 5                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 61                                          ;
+; Total pins                         ; 15                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; Circuito_Completo  ; projeto            ;
+; Top-level entity name                                            ; and_5bits          ; projeto            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,152 +162,54 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; g2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/g2_4bits.bdf              ;         ;
-; decodificador_nerfado.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/decodificador_nerfado.bdf ;         ;
-; b2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/b2_4bits.bdf              ;         ;
-; a2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/a2_4bits.bdf              ;         ;
-; a1_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/a1_4bits.bdf              ;         ;
-; g2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/g2.bdf                    ;         ;
-; g1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/g1.bdf                    ;         ;
-; f2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/f2.bdf                    ;         ;
-; f1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/f1.bdf                    ;         ;
-; e2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/e2.bdf                    ;         ;
-; e1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/e1.bdf                    ;         ;
-; d2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/d2.bdf                    ;         ;
-; d1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/d1.bdf                    ;         ;
-; c2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/c2.bdf                    ;         ;
-; c1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/c1.bdf                    ;         ;
-; b2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/b2.bdf                    ;         ;
-; a2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/a2.bdf                    ;         ;
-; a1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/a1.bdf                    ;         ;
-; decodificador_da_dor.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/decodificador_da_dor.bdf  ;         ;
-; all_entradas.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/all_entradas.bdf          ;         ;
-; comparadorZero.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorZero.bdf        ;         ;
-; comparadorSinal.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorSinal.bdf       ;         ;
-; comparadorMenor.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorMenor.bdf       ;         ;
-; comparadorMaior.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorMaior.bdf       ;         ;
-; comparadorIgual.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorIgual.bdf       ;         ;
-; xor_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/xor_5bits.bdf             ;         ;
-; and_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/and_5bits.bdf             ;         ;
-; MUX_3S_3E_5bits.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_3S_3E_5bits.bdf       ;         ;
-; MUX_2S_2E_5bits.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_2S_2E_5bits.bdf       ;         ;
-; Subtrator.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Subtrator.bdf             ;         ;
-; ComplementoA2_5bits.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/ComplementoA2_5bits.bdf   ;         ;
-; MUX_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_5bits.bdf             ;         ;
-; MUX_4bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_4bits.bdf             ;         ;
-; ComplementoA2_4bits.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/ComplementoA2_4bits.bdf   ;         ;
-; Somador_Supremo.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Somador_Supremo.bdf       ;         ;
-; comparadorFull.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparadorFull.bdf        ;         ;
-; comparador.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/comparador.bdf            ;         ;
-; Soma_4_bits.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Soma_4_bits.bdf           ;         ;
-; Seletor.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Seletor.bdf               ;         ;
-; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/FullAdder.bdf             ;         ;
-; MUX_2S_2E_1bit.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_2S_2E_1bit.bdf        ;         ;
-; MUX_Status_Sinal.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/MUX_Status_Sinal.bdf      ;         ;
-; Modulo_Cmp2.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Modulo_Cmp2.bdf           ;         ;
-; Circuito_Completo.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/Circuito_Completo.bdf     ;         ;
-; all_entradas_4bits.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/all_entradas_4bits.bdf    ;         ;
-; c2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/c2_4bits.bdf              ;         ;
-; d2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/d2_4bits.bdf              ;         ;
-; f2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/f2_4bits.bdf              ;         ;
-; e2_4bits.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/projeto_SD/projeto_sd/e2_4bits.bdf              ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; and_5bits.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/enior/Desktop/projetox/oficial/projeto_SD/projeto_sd/and_5bits.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 148        ;
-;                                             ;            ;
-; Total combinational functions               ; 148        ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 113        ;
-;     -- 3 input functions                    ; 23         ;
-;     -- <=2 input functions                  ; 12         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 148        ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 61         ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; B[0]~input ;
-; Maximum fan-out                             ; 25         ;
-; Total fan-out                               ; 648        ;
-; Average fan-out                             ; 2.40       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 5     ;
+;                                             ;       ;
+; Total combinational functions               ; 5     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 5     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 5     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 15    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; inst  ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 30    ;
+; Average fan-out                             ; 0.86  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name           ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------+--------------+
-; |Circuito_Completo                 ; 148 (1)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |Circuito_Completo                                                              ; Circuito_Completo     ; work         ;
-;    |MUX_2S_2E_5bits:inst12|        ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|MUX_2S_2E_5bits:inst12                                       ; MUX_2S_2E_5bits       ; work         ;
-;    |MUX_2S_2E_5bits:inst14|        ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|MUX_2S_2E_5bits:inst14                                       ; MUX_2S_2E_5bits       ; work         ;
-;    |MUX_Status_Sinal:inst18|       ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|MUX_Status_Sinal:inst18                                      ; MUX_Status_Sinal      ; work         ;
-;    |Modulo_Cmp2:inst5|             ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Modulo_Cmp2:inst5                                            ; Modulo_Cmp2           ; work         ;
-;       |MUX_4bits:inst2|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Modulo_Cmp2:inst5|MUX_4bits:inst2                            ; MUX_4bits             ; work         ;
-;    |Seletor:inst|                  ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Seletor:inst                                                 ; Seletor               ; work         ;
-;    |Somador_Supremo:instagram|     ; 16 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram                                    ; Somador_Supremo       ; work         ;
-;       |ComplementoA2_5bits:inst44| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|ComplementoA2_5bits:inst44         ; ComplementoA2_5bits   ; work         ;
-;       |MUX_4bits:inst11|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|MUX_4bits:inst11                   ; MUX_4bits             ; work         ;
-;       |Soma_4_bits:inst37|         ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|Soma_4_bits:inst37                 ; Soma_4_bits           ; work         ;
-;          |FullAdder:inst1|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|Soma_4_bits:inst37|FullAdder:inst1 ; FullAdder             ; work         ;
-;          |FullAdder:inst2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|Soma_4_bits:inst37|FullAdder:inst2 ; FullAdder             ; work         ;
-;          |FullAdder:inst3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Somador_Supremo:instagram|Soma_4_bits:inst37|FullAdder:inst3 ; FullAdder             ; work         ;
-;    |Subtrator:inst4|               ; 21 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4                                              ; Subtrator             ; work         ;
-;       |ComplementoA2_4bits:inst12| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|ComplementoA2_4bits:inst12                   ; ComplementoA2_4bits   ; work         ;
-;       |ComplementoA2_4bits:inst|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|ComplementoA2_4bits:inst                     ; ComplementoA2_4bits   ; work         ;
-;       |ComplementoA2_5bits:inst44| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|ComplementoA2_5bits:inst44                   ; ComplementoA2_5bits   ; work         ;
-;       |MUX_4bits:inst10|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|MUX_4bits:inst10                             ; MUX_4bits             ; work         ;
-;       |MUX_4bits:inst11|           ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|MUX_4bits:inst11                             ; MUX_4bits             ; work         ;
-;       |Soma_4_bits:inst37|         ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|Soma_4_bits:inst37                           ; Soma_4_bits           ; work         ;
-;          |FullAdder:inst1|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|Soma_4_bits:inst37|FullAdder:inst1           ; FullAdder             ; work         ;
-;          |FullAdder:inst2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|Soma_4_bits:inst37|FullAdder:inst2           ; FullAdder             ; work         ;
-;          |FullAdder:inst3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|Subtrator:inst4|Soma_4_bits:inst37|FullAdder:inst3           ; FullAdder             ; work         ;
-;    |comparadorIgual:inst1|         ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorIgual:inst1                                        ; comparadorIgual       ; work         ;
-;       |comparadorFull:inster|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorIgual:inst1|comparadorFull:inster                  ; comparadorFull        ; work         ;
-;          |comparador:inst3|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorIgual:inst1|comparadorFull:inster|comparador:inst3 ; comparador            ; work         ;
-;    |comparadorMaior:inst7|         ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorMaior:inst7                                        ; comparadorMaior       ; work         ;
-;       |comparadorFull:inster|      ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorMaior:inst7|comparadorFull:inster                  ; comparadorFull        ; work         ;
-;          |comparador:inst2|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorMaior:inst7|comparadorFull:inster|comparador:inst2 ; comparador            ; work         ;
-;          |comparador:inst3|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorMaior:inst7|comparadorFull:inster|comparador:inst3 ; comparador            ; work         ;
-;       |comparadorSinal:instar|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|comparadorMaior:inst7|comparadorSinal:instar                 ; comparadorSinal       ; work         ;
-;    |decodificador_da_dor:inst20|   ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_da_dor:inst20                                  ; decodificador_da_dor  ; work         ;
-;    |decodificador_nerfado:inst2|   ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2                                  ; decodificador_nerfado ; work         ;
-;       |a1_4bits:inst|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|a1_4bits:inst                    ; a1_4bits              ; work         ;
-;       |a2_4bits:inst9|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|a2_4bits:inst9                   ; a2_4bits              ; work         ;
-;       |b2_4bits:inst10|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|b2_4bits:inst10                  ; b2_4bits              ; work         ;
-;       |c2_4bits:inst11|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|c2_4bits:inst11                  ; c2_4bits              ; work         ;
-;       |d2_4bits:inst12|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|d2_4bits:inst12                  ; d2_4bits              ; work         ;
-;       |e2_4bits:inst13|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|e2_4bits:inst13                  ; e2_4bits              ; work         ;
-;       |f2_4bits:inst14|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|f2_4bits:inst14                  ; f2_4bits              ; work         ;
-;       |g2_4bits:inst15|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst2|g2_4bits:inst15                  ; g2_4bits              ; work         ;
-;    |decodificador_nerfado:inst3|   ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3                                  ; decodificador_nerfado ; work         ;
-;       |a1_4bits:inst|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|a1_4bits:inst                    ; a1_4bits              ; work         ;
-;       |a2_4bits:inst9|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|a2_4bits:inst9                   ; a2_4bits              ; work         ;
-;       |b2_4bits:inst10|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|b2_4bits:inst10                  ; b2_4bits              ; work         ;
-;       |c2_4bits:inst11|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|c2_4bits:inst11                  ; c2_4bits              ; work         ;
-;       |d2_4bits:inst12|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|d2_4bits:inst12                  ; d2_4bits              ; work         ;
-;       |e2_4bits:inst13|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|e2_4bits:inst13                  ; e2_4bits              ; work         ;
-;       |f2_4bits:inst14|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|f2_4bits:inst14                  ; f2_4bits              ; work         ;
-;       |g2_4bits:inst15|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Circuito_Completo|decodificador_nerfado:inst3|g2_4bits:inst15                  ; g2_4bits              ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |and_5bits                 ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |and_5bits          ; and_5bits   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -331,17 +233,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 61                          ;
-; cycloneiii_lcell_comb ; 173                         ;
-;     normal            ; 173                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 113                         ;
+; boundary_port         ; 15                          ;
+; cycloneiii_lcell_comb ; 5                           ;
+;     normal            ; 5                           ;
+;         2 data inputs ; 5                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 7.59                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -350,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -360,54 +258,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Aug 21 20:54:29 2022
+    Info: Processing started: Mon Aug 22 14:28:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file xor_5bits.bdf
+    Info (12023): Found entity 1: xor_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file subtrator.bdf
+    Info (12023): Found entity 1: Subtrator
+Info (12021): Found 1 design units, including 1 entities, in source file soma_4_bits.bdf
+    Info (12023): Found entity 1: Soma_4_bits
+Info (12021): Found 1 design units, including 1 entities, in source file somador_supremo.bdf
+    Info (12023): Found entity 1: Somador_Supremo
+Info (12021): Found 1 design units, including 1 entities, in source file seletor.bdf
+    Info (12023): Found entity 1: Seletor
+Info (12021): Found 1 design units, including 1 entities, in source file mux_status_sinal.bdf
+    Info (12023): Found entity 1: MUX_Status_Sinal
+Info (12021): Found 1 design units, including 1 entities, in source file mux_5bits.bdf
+    Info (12023): Found entity 1: MUX_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4bits.bdf
+    Info (12023): Found entity 1: MUX_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_3s_3e_5bits.bdf
+    Info (12023): Found entity 1: MUX_3S_3E_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_5bits.bdf
+    Info (12023): Found entity 1: MUX_2S_2E_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_1bit.bdf
+    Info (12023): Found entity 1: MUX_2S_2E_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_cmp2.bdf
+    Info (12023): Found entity 1: Modulo_Cmp2
 Info (12021): Found 1 design units, including 1 entities, in source file g2_4bits.bdf
     Info (12023): Found entity 1: g2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file decod_4bits.bdf
-    Info (12023): Found entity 1: decod_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file decodificador_nerfado.bdf
-    Info (12023): Found entity 1: decodificador_nerfado
-Info (12021): Found 1 design units, including 1 entities, in source file blah.bdf
-    Info (12023): Found entity 1: blah
-Info (12021): Found 1 design units, including 1 entities, in source file b2_4bits.bdf
-    Info (12023): Found entity 1: b2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file a2_4bits.bdf
-    Info (12023): Found entity 1: a2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file a1_4bits.bdf
-    Info (12023): Found entity 1: a1_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file g2.bdf
     Info (12023): Found entity 1: g2
 Info (12021): Found 1 design units, including 1 entities, in source file g1.bdf
     Info (12023): Found entity 1: g1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file f2_4bits.bdf
+    Info (12023): Found entity 1: f2_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file f2.bdf
     Info (12023): Found entity 1: f2
 Info (12021): Found 1 design units, including 1 entities, in source file f1.bdf
     Info (12023): Found entity 1: f1
+Info (12021): Found 1 design units, including 1 entities, in source file e2_4bits.bdf
+    Info (12023): Found entity 1: e2_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file e2.bdf
     Info (12023): Found entity 1: e2
 Info (12021): Found 1 design units, including 1 entities, in source file e1.bdf
     Info (12023): Found entity 1: e1
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_nerfado.bdf
+    Info (12023): Found entity 1: decodificador_nerfado
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_da_dor.bdf
+    Info (12023): Found entity 1: decodificador_da_dor
+Info (12021): Found 1 design units, including 1 entities, in source file d2_4bits.bdf
+    Info (12023): Found entity 1: d2_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file d2.bdf
     Info (12023): Found entity 1: d2
 Info (12021): Found 1 design units, including 1 entities, in source file d1.bdf
     Info (12023): Found entity 1: d1
-Info (12021): Found 1 design units, including 1 entities, in source file c2.bdf
-    Info (12023): Found entity 1: c2
-Info (12021): Found 1 design units, including 1 entities, in source file c1.bdf
-    Info (12023): Found entity 1: c1
-Info (12021): Found 1 design units, including 1 entities, in source file b2.bdf
-    Info (12023): Found entity 1: b2
-Info (12021): Found 1 design units, including 1 entities, in source file a2.bdf
-    Info (12023): Found entity 1: a2
-Info (12021): Found 1 design units, including 1 entities, in source file a1.bdf
-    Info (12023): Found entity 1: a1
-Info (12021): Found 1 design units, including 1 entities, in source file decodificador_da_dor.bdf
-    Info (12023): Found entity 1: decodificador_da_dor
-Info (12021): Found 1 design units, including 1 entities, in source file all_entradas.bdf
-    Info (12023): Found entity 1: all_entradas
+Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_5bits.bdf
+    Info (12023): Found entity 1: ComplementoA2_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_4bits.bdf
+    Info (12023): Found entity 1: ComplementoA2_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file comparadorzero.bdf
     Info (12023): Found entity 1: comparadorZero
 Info (12021): Found 1 design units, including 1 entities, in source file comparadorsinal.bdf
@@ -418,150 +330,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file compara
     Info (12023): Found entity 1: comparadorMaior
 Info (12021): Found 1 design units, including 1 entities, in source file comparadorigual.bdf
     Info (12023): Found entity 1: comparadorIgual
-Info (12021): Found 1 design units, including 1 entities, in source file xor_5bits.bdf
-    Info (12023): Found entity 1: xor_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file and_5bits.bdf
-    Info (12023): Found entity 1: and_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file mux_3s_3e_5bits.bdf
-    Info (12023): Found entity 1: MUX_3S_3E_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_5bits.bdf
-    Info (12023): Found entity 1: MUX_2S_2E_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file subtrator.bdf
-    Info (12023): Found entity 1: Subtrator
-Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_5bits.bdf
-    Info (12023): Found entity 1: ComplementoA2_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file mux_5bits.bdf
-    Info (12023): Found entity 1: MUX_5bits
-Info (12021): Found 1 design units, including 1 entities, in source file mux_4bits.bdf
-    Info (12023): Found entity 1: MUX_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file complementoa2_4bits.bdf
-    Info (12023): Found entity 1: ComplementoA2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file somador_supremo.bdf
-    Info (12023): Found entity 1: Somador_Supremo
 Info (12021): Found 1 design units, including 1 entities, in source file comparadorfull.bdf
     Info (12023): Found entity 1: comparadorFull
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.bdf
     Info (12023): Found entity 1: comparador
-Info (12021): Found 1 design units, including 1 entities, in source file soma_4_bits.bdf
-    Info (12023): Found entity 1: Soma_4_bits
-Info (12021): Found 1 design units, including 1 entities, in source file seletor.bdf
-    Info (12023): Found entity 1: Seletor
-Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
-    Info (12023): Found entity 1: FullAdder
-Info (12021): Found 1 design units, including 1 entities, in source file mux_2s_2e_1bit.bdf
-    Info (12023): Found entity 1: MUX_2S_2E_1bit
-Info (12021): Found 1 design units, including 1 entities, in source file mux_status_sinal.bdf
-    Info (12023): Found entity 1: MUX_Status_Sinal
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_cmp2.bdf
-    Info (12023): Found entity 1: Modulo_Cmp2
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_completo.bdf
     Info (12023): Found entity 1: Circuito_Completo
-Info (12021): Found 1 design units, including 1 entities, in source file all_entradas_4bits.bdf
-    Info (12023): Found entity 1: all_entradas_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file c2_4bits.bdf
     Info (12023): Found entity 1: c2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file d2_4bits.bdf
-    Info (12023): Found entity 1: d2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file f2_4bits.bdf
-    Info (12023): Found entity 1: f2_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file e2_4bits.bdf
-    Info (12023): Found entity 1: e2_4bits
-Info (12127): Elaborating entity "Circuito_Completo" for the top level hierarchy
-Info (12128): Elaborating entity "MUX_Status_Sinal" for hierarchy "MUX_Status_Sinal:inst18"
-Info (12128): Elaborating entity "comparadorMaior" for hierarchy "comparadorMaior:inst7"
-Warning (275008): Primitive "GND" of instance "inst12" not used
-Info (12128): Elaborating entity "comparadorSinal" for hierarchy "comparadorMaior:inst7|comparadorSinal:instar"
-Info (12128): Elaborating entity "comparadorFull" for hierarchy "comparadorMaior:inst7|comparadorFull:inster"
-Info (12128): Elaborating entity "comparador" for hierarchy "comparadorMaior:inst7|comparadorFull:inster|comparador:inst3"
-Info (12128): Elaborating entity "comparadorMenor" for hierarchy "comparadorMenor:inst8"
-Warning (275008): Primitive "GND" of instance "inst12" not used
-Info (12128): Elaborating entity "comparadorIgual" for hierarchy "comparadorIgual:inst1"
-Warning (275008): Primitive "GND" of instance "inst12" not used
-Warning (275008): Primitive "GND" of instance "inst5" not used
-Info (12128): Elaborating entity "comparadorZero" for hierarchy "comparadorIgual:inst1|comparadorZero:inst10"
-Info (12128): Elaborating entity "MUX_2S_2E_1bit" for hierarchy "MUX_2S_2E_1bit:inst17"
-Info (12128): Elaborating entity "Somador_Supremo" for hierarchy "Somador_Supremo:instagram"
-Info (12128): Elaborating entity "MUX_5bits" for hierarchy "Somador_Supremo:instagram|MUX_5bits:inst16"
-Info (12128): Elaborating entity "Soma_4_bits" for hierarchy "Somador_Supremo:instagram|Soma_4_bits:inst37"
-Info (12128): Elaborating entity "FullAdder" for hierarchy "Somador_Supremo:instagram|Soma_4_bits:inst37|FullAdder:inst3"
-Info (12128): Elaborating entity "MUX_4bits" for hierarchy "Somador_Supremo:instagram|MUX_4bits:inst10"
-Info (12128): Elaborating entity "ComplementoA2_4bits" for hierarchy "Somador_Supremo:instagram|ComplementoA2_4bits:inst"
-Info (12128): Elaborating entity "ComplementoA2_5bits" for hierarchy "Somador_Supremo:instagram|ComplementoA2_5bits:inst44"
-Info (12128): Elaborating entity "Seletor" for hierarchy "Seletor:inst"
-Info (12128): Elaborating entity "Subtrator" for hierarchy "Subtrator:inst4"
-Info (12128): Elaborating entity "decodificador_nerfado" for hierarchy "decodificador_nerfado:inst2"
-Warning (275085): Found inconsistent dimensions for element "c2"
-Warning (275080): Converted elements in bus name "C2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "C2[3..0]" to "C23..0"
-Warning (275085): Found inconsistent dimensions for element "d2"
-Warning (275080): Converted elements in bus name "D2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "D2[3..0]" to "D23..0"
-Warning (275085): Found inconsistent dimensions for element "e2"
-Warning (275080): Converted elements in bus name "E2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "E2[3..0]" to "E23..0"
-Warning (275085): Found inconsistent dimensions for element "f2"
-Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "F2[3..0]" to "F23..0"
-Info (12128): Elaborating entity "a1_4bits" for hierarchy "decodificador_nerfado:inst2|a1_4bits:inst"
-Info (12128): Elaborating entity "all_entradas_4bits" for hierarchy "decodificador_nerfado:inst2|a1_4bits:inst|all_entradas_4bits:inst"
-Info (12128): Elaborating entity "a2_4bits" for hierarchy "decodificador_nerfado:inst2|a2_4bits:inst9"
-Info (12128): Elaborating entity "b2_4bits" for hierarchy "decodificador_nerfado:inst2|b2_4bits:inst10"
-Info (12128): Elaborating entity "c2_4bits" for hierarchy "decodificador_nerfado:inst2|c2_4bits:inst11"
-Warning (275085): Found inconsistent dimensions for element "c2"
-Warning (275080): Converted elements in bus name "C2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "C2[3..0]" to "C23..0"
-Info (12128): Elaborating entity "d2_4bits" for hierarchy "decodificador_nerfado:inst2|d2_4bits:inst12"
-Warning (275085): Found inconsistent dimensions for element "d2"
-Warning (275080): Converted elements in bus name "D2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "D2[3..0]" to "D23..0"
-Info (12128): Elaborating entity "e2_4bits" for hierarchy "decodificador_nerfado:inst2|e2_4bits:inst13"
-Warning (275085): Found inconsistent dimensions for element "e2"
-Warning (275080): Converted elements in bus name "E2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "E2[3..0]" to "E23..0"
-Info (12128): Elaborating entity "f2_4bits" for hierarchy "decodificador_nerfado:inst2|f2_4bits:inst14"
-Warning (275085): Found inconsistent dimensions for element "f2"
-Warning (275080): Converted elements in bus name "F2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "F2[3..0]" to "F23..0"
-Info (12128): Elaborating entity "g2_4bits" for hierarchy "decodificador_nerfado:inst2|g2_4bits:inst15"
-Info (12128): Elaborating entity "decodificador_da_dor" for hierarchy "decodificador_da_dor:inst20"
-Info (12128): Elaborating entity "a1" for hierarchy "decodificador_da_dor:inst20|a1:inst"
-Info (12128): Elaborating entity "c1" for hierarchy "decodificador_da_dor:inst20|c1:inst1"
-Warning (275008): Primitive "NOT" of instance "inst3" not used
-Info (12128): Elaborating entity "d1" for hierarchy "decodificador_da_dor:inst20|d1:inst34"
-Info (12128): Elaborating entity "e1" for hierarchy "decodificador_da_dor:inst20|e1:inst37"
-Info (12128): Elaborating entity "f1" for hierarchy "decodificador_da_dor:inst20|f1:inst4"
-Info (12128): Elaborating entity "g1" for hierarchy "decodificador_da_dor:inst20|g1:inst5"
-Info (12128): Elaborating entity "a2" for hierarchy "decodificador_da_dor:inst20|a2:inst35"
-Info (12128): Elaborating entity "all_entradas" for hierarchy "decodificador_da_dor:inst20|a2:inst35|all_entradas:inst10"
-Info (12128): Elaborating entity "b2" for hierarchy "decodificador_da_dor:inst20|b2:inst28"
-Info (12128): Elaborating entity "c2" for hierarchy "decodificador_da_dor:inst20|c2:inst29"
-Info (12128): Elaborating entity "d2" for hierarchy "decodificador_da_dor:inst20|d2:inst30"
-Info (12128): Elaborating entity "e2" for hierarchy "decodificador_da_dor:inst20|e2:inst36"
-Info (12128): Elaborating entity "f2" for hierarchy "decodificador_da_dor:inst20|f2:inst32"
-Info (12128): Elaborating entity "g2" for hierarchy "decodificador_da_dor:inst20|g2:inst33"
-Info (12128): Elaborating entity "MUX_2S_2E_5bits" for hierarchy "MUX_2S_2E_5bits:inst12"
-Info (12128): Elaborating entity "MUX_3S_3E_5bits" for hierarchy "MUX_3S_3E_5bits:inst13"
-Info (12128): Elaborating entity "Modulo_Cmp2" for hierarchy "Modulo_Cmp2:inst5"
-Info (12128): Elaborating entity "and_5bits" for hierarchy "and_5bits:inst10"
-Info (12128): Elaborating entity "xor_5bits" for hierarchy "xor_5bits:inst9"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "A_C1" is stuck at GND
-    Warning (13410): Pin "A_B1" is stuck at GND
-    Warning (13410): Pin "A_G1" is stuck at VCC
-    Warning (13410): Pin "B_B1" is stuck at GND
-    Warning (13410): Pin "B_C1" is stuck at GND
-    Warning (13410): Pin "B_G1" is stuck at VCC
+Info (12021): Found 1 design units, including 1 entities, in source file c2.bdf
+    Info (12023): Found entity 1: c2
+Info (12021): Found 1 design units, including 1 entities, in source file c1.bdf
+    Info (12023): Found entity 1: c1
+Info (12021): Found 1 design units, including 1 entities, in source file b2_4bits.bdf
+    Info (12023): Found entity 1: b2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file b2.bdf
+    Info (12023): Found entity 1: b2
+Info (12021): Found 1 design units, including 1 entities, in source file and_5bits.bdf
+    Info (12023): Found entity 1: and_5bits
+Info (12021): Found 1 design units, including 1 entities, in source file all_entradas_4bits.bdf
+    Info (12023): Found entity 1: all_entradas_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file all_entradas.bdf
+    Info (12023): Found entity 1: all_entradas
+Info (12021): Found 1 design units, including 1 entities, in source file a2_4bits.bdf
+    Info (12023): Found entity 1: a2_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file a2.bdf
+    Info (12023): Found entity 1: a2
+Info (12021): Found 1 design units, including 1 entities, in source file a1_4bits.bdf
+    Info (12023): Found entity 1: a1_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file a1.bdf
+    Info (12023): Found entity 1: a1
+Info (12127): Elaborating entity "and_5bits" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 209 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 148 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4752 megabytes
-    Info: Processing ended: Sun Aug 21 20:54:38 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Mon Aug 22 14:29:00 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

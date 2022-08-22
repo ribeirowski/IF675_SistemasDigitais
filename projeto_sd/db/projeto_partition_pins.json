@@ -4,223 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Led",
+					"name" : "e[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A_A1",
+					"name" : "e[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A_D1",
+					"name" : "e[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A_E1",
+					"name" : "e[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A_F1",
+					"name" : "e[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A_A2",
+					"name" : "b[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A_B2",
+					"name" : "a[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A_C2",
+					"name" : "b[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A_D2",
+					"name" : "a[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A_E2",
+					"name" : "b[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A_F2",
+					"name" : "a[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A_G2",
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B_A1",
+					"name" : "a[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B_D1",
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B_E1",
-					"strict" : false
-				},
-				{
-					"name" : "B_F1",
-					"strict" : false
-				},
-				{
-					"name" : "B_A2",
-					"strict" : false
-				},
-				{
-					"name" : "B_B2",
-					"strict" : false
-				},
-				{
-					"name" : "B_C2",
-					"strict" : false
-				},
-				{
-					"name" : "B_D2",
-					"strict" : false
-				},
-				{
-					"name" : "B_E2",
-					"strict" : false
-				},
-				{
-					"name" : "B_F2",
-					"strict" : false
-				},
-				{
-					"name" : "B_G2",
-					"strict" : false
-				},
-				{
-					"name" : "F_A1",
-					"strict" : false
-				},
-				{
-					"name" : "F_B1",
-					"strict" : false
-				},
-				{
-					"name" : "F_C1",
-					"strict" : false
-				},
-				{
-					"name" : "F_D1",
-					"strict" : false
-				},
-				{
-					"name" : "F_E1",
-					"strict" : false
-				},
-				{
-					"name" : "F_F1",
-					"strict" : false
-				},
-				{
-					"name" : "F_G1",
-					"strict" : false
-				},
-				{
-					"name" : "F_A2",
-					"strict" : false
-				},
-				{
-					"name" : "F_B2",
-					"strict" : false
-				},
-				{
-					"name" : "F_C2",
-					"strict" : false
-				},
-				{
-					"name" : "F_D2",
-					"strict" : false
-				},
-				{
-					"name" : "F_E2",
-					"strict" : false
-				},
-				{
-					"name" : "F_F2",
-					"strict" : false
-				},
-				{
-					"name" : "F_G2",
-					"strict" : false
-				},
-				{
-					"name" : "F[4]",
-					"strict" : false
-				},
-				{
-					"name" : "F[3]",
-					"strict" : false
-				},
-				{
-					"name" : "F[2]",
-					"strict" : false
-				},
-				{
-					"name" : "F[1]",
-					"strict" : false
-				},
-				{
-					"name" : "F[0]",
-					"strict" : false
-				},
-				{
-					"name" : "S[0]",
-					"strict" : false
-				},
-				{
-					"name" : "S[1]",
-					"strict" : false
-				},
-				{
-					"name" : "S[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
+					"name" : "a[0]",
 					"strict" : false
 				}
 			]
