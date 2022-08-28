@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-# Date created = 16:25:38  August 01, 2022
+# Date created = 10:01:00  August 22, 2022
 #
 # -------------------------------------------------------------------------- #
 #
@@ -37,63 +37,167 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Circuito_Completo
+
+# Project-Wide Assignments
+# ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:25:38  AUGUST 01, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE xor_5bits.bdf
+set_global_assignment -name BDF_FILE Subtrator.bdf
+set_global_assignment -name BDF_FILE Soma_4_bits.bdf
+set_global_assignment -name BDF_FILE Somador_Supremo.bdf
+set_global_assignment -name BDF_FILE Seletor.bdf
+set_global_assignment -name BDF_FILE MUX_Status_Sinal.bdf
+set_global_assignment -name BDF_FILE MUX_5bits.bdf
+set_global_assignment -name BDF_FILE MUX_4bits.bdf
+set_global_assignment -name BDF_FILE MUX_3S_3E_5bits.bdf
+set_global_assignment -name BDF_FILE MUX_2S_2E_5bits.bdf
+set_global_assignment -name BDF_FILE MUX_2S_2E_1bit.bdf
+set_global_assignment -name BDF_FILE Modulo_Cmp2.bdf
+set_global_assignment -name BDF_FILE g2_4bits.bdf
+set_global_assignment -name BDF_FILE g2.bdf
+set_global_assignment -name BDF_FILE g1.bdf
+set_global_assignment -name BDF_FILE FullAdder.bdf
+set_global_assignment -name BDF_FILE f2_4bits.bdf
+set_global_assignment -name BDF_FILE f2.bdf
+set_global_assignment -name BDF_FILE f1.bdf
+set_global_assignment -name BDF_FILE e2_4bits.bdf
+set_global_assignment -name BDF_FILE e2.bdf
+set_global_assignment -name BDF_FILE e1.bdf
+set_global_assignment -name BDF_FILE decodificador_nerfado.bdf
 set_global_assignment -name BDF_FILE decodificador_da_dor.bdf
-set_global_assignment -name BDF_FILE all_entradas.bdf
+set_global_assignment -name BDF_FILE d2_4bits.bdf
+set_global_assignment -name BDF_FILE d2.bdf
+set_global_assignment -name BDF_FILE d1.bdf
+set_global_assignment -name BDF_FILE ComplementoA2_5bits.bdf
+set_global_assignment -name BDF_FILE ComplementoA2_4bits.bdf
 set_global_assignment -name BDF_FILE comparadorZero.bdf
 set_global_assignment -name BDF_FILE comparadorSinal.bdf
 set_global_assignment -name BDF_FILE comparadorMenor.bdf
 set_global_assignment -name BDF_FILE comparadorMaior.bdf
 set_global_assignment -name BDF_FILE comparadorIgual.bdf
-set_global_assignment -name BDF_FILE xor_5bits.bdf
-set_global_assignment -name BDF_FILE and_5bits.bdf
-set_global_assignment -name BDF_FILE MUX_3S_3E_5bits.bdf
-set_global_assignment -name BDF_FILE MUX_2S_2E_5bits.bdf
-set_global_assignment -name BDF_FILE Subtrator.bdf
-set_global_assignment -name BDF_FILE ComplementoA2_5bits.bdf
-set_global_assignment -name BDF_FILE MUX_5bits.bdf
-set_global_assignment -name BDF_FILE MUX_4bits.bdf
-set_global_assignment -name BDF_FILE ComplementoA2_4bits.bdf
-set_global_assignment -name BDF_FILE Somador_Supremo.bdf
 set_global_assignment -name BDF_FILE comparadorFull.bdf
 set_global_assignment -name BDF_FILE comparador.bdf
-set_global_assignment -name BDF_FILE Soma_4_bits.bdf
-set_global_assignment -name BDF_FILE Seletor.bdf
-set_global_assignment -name BDF_FILE FullAdder.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Soma_4_bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Comparador).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Somador_Supremo).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_5bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_4bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(ComplementoA2_4bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(comparadorFull).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Seletor).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(FullAdder).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(ComplementoA2_5bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Subtrator).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_2S_2E_5bits).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_3S_3E_5bits).vwf"
-set_global_assignment -name BDF_FILE MUX_2S_2E_1bit.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_2S_2E_1bit).vwf"
-set_global_assignment -name BDF_FILE MUX_Status_Sinal.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(MUX_Status_Sinal).vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE xor_5bits.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE and_5bits.vwf
-set_global_assignment -name BDF_FILE Modulo_Cmp2.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Modulo_Cmp2).vwf"
 set_global_assignment -name BDF_FILE Circuito_Completo.bdf
+set_global_assignment -name BDF_FILE c2_4bits.bdf
+set_global_assignment -name BDF_FILE c2.bdf
+set_global_assignment -name BDF_FILE c1.bdf
+set_global_assignment -name BDF_FILE b2_4bits.bdf
+set_global_assignment -name BDF_FILE b2.bdf
+set_global_assignment -name BDF_FILE and_5bits.bdf
+set_global_assignment -name BDF_FILE all_entradas_4bits.bdf
+set_global_assignment -name BDF_FILE all_entradas.bdf
+set_global_assignment -name BDF_FILE a2_4bits.bdf
+set_global_assignment -name BDF_FILE a2.bdf
+set_global_assignment -name BDF_FILE a1_4bits.bdf
+set_global_assignment -name BDF_FILE a1.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Circuito_Completo.vwf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_AC26 -to A[0]
+set_location_assignment PIN_AD26 -to A[1]
+set_location_assignment PIN_AB26 -to A[2]
+set_location_assignment PIN_AC25 -to A[3]
+set_location_assignment PIN_AB25 -to A[4]
+set_location_assignment PIN_AB28 -to B[0]
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY Circuito_Completo
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# -------------------------------
+# start ENTITY(Circuito_Completo)
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(Circuito_Completo)
+# -----------------------------
+set_location_assignment PIN_AC28 -to B[1]
+set_location_assignment PIN_AC27 -to B[2]
+set_location_assignment PIN_AD27 -to B[3]
+set_location_assignment PIN_AB27 -to B[4]
+set_location_assignment PIN_Y23 -to S[2]
+set_location_assignment PIN_Y24 -to S[1]
+set_location_assignment PIN_AA22 -to S[0]
+set_location_assignment PIN_F17 -to Led
+set_location_assignment PIN_E21 -to F[0]
+set_location_assignment PIN_E22 -to F[1]
+set_location_assignment PIN_E25 -to F[2]
+set_location_assignment PIN_E24 -to F[3]
+set_location_assignment PIN_H21 -to F[4]
+set_location_assignment PIN_G17 -to Sinal_A
+set_location_assignment PIN_F18 -to Sinal_B
+set_location_assignment PIN_AD17 -to A_A1
+set_location_assignment PIN_AE17 -to A_B1
+set_location_assignment PIN_AG17 -to A_C1
+set_location_assignment PIN_AH17 -to A_D1
+set_location_assignment PIN_AF17 -to A_E1
+set_location_assignment PIN_AG18 -to A_F1
+set_location_assignment PIN_AA14 -to A_G1
+set_location_assignment PIN_AA17 -to A_A2
+set_location_assignment PIN_AB16 -to A_B2
+set_location_assignment PIN_AA16 -to A_C2
+set_location_assignment PIN_AB17 -to A_D2
+set_location_assignment PIN_AB15 -to A_E2
+set_location_assignment PIN_AA15 -to A_F2
+set_location_assignment PIN_AC17 -to A_G2
+set_location_assignment PIN_AD18 -to B_A1
+set_location_assignment PIN_AC18 -to B_B1
+set_location_assignment PIN_AB18 -to B_C1
+set_location_assignment PIN_AH19 -to B_D1
+set_location_assignment PIN_AG19 -to B_E1
+set_location_assignment PIN_AF18 -to B_F1
+set_location_assignment PIN_AH18 -to B_G1
+set_location_assignment PIN_AB19 -to B_A2
+set_location_assignment PIN_AA19 -to B_B2
+set_location_assignment PIN_AG21 -to B_C2
+set_location_assignment PIN_AH21 -to B_D2
+set_location_assignment PIN_AE19 -to B_E2
+set_location_assignment PIN_AF19 -to B_F2
+set_location_assignment PIN_AE18 -to B_G2
+set_location_assignment PIN_M24 -to F_A1
+set_location_assignment PIN_Y22 -to F_B1
+set_location_assignment PIN_W21 -to F_C1
+set_location_assignment PIN_W22 -to F_D1
+set_location_assignment PIN_W25 -to F_E1
+set_location_assignment PIN_U23 -to F_F1
+set_location_assignment PIN_U24 -to F_G1
+set_location_assignment PIN_G18 -to F_A2
+set_location_assignment PIN_F22 -to F_B2
+set_location_assignment PIN_E17 -to F_C2
+set_location_assignment PIN_L26 -to F_D2
+set_location_assignment PIN_L25 -to F_E2
+set_location_assignment PIN_J22 -to F_F2
+set_location_assignment PIN_H22 -to F_G2
+set_global_assignment -name VECTOR_WAVEFORM_FILE "Waveform(Subtrator).vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorSinal.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

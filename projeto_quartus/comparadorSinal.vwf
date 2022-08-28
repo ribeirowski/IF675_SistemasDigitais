@@ -1,14 +1,14 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Projeto_SD -c Projeto_SD --vector_source="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/comparadorSinal.vwf" --testbench_file="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/simulation/qsim/comparadorSinal.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Projeto_SD -c Projeto_SD --vector_source="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/comparadorSinal.vwf" --testbench_file="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/simulation/qsim/comparadorSinal.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/simulation/qsim/" Projeto_SD -c Projeto_SD</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/enior/Desktop/EC_UFPE/IF675_SD/Projeto_SD/simulation/qsim/" Projeto_SD -c Projeto_SD</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/comparadorSinal.vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/comparadorSinal.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off projeto -c projeto --vector_source="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/comparadorSinal.vwf" --testbench_file="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/comparadorSinal.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/thiag/OneDrive/Documentos/projeto_quartus/simulation/qsim/" projeto -c projeto</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
-vlog -work work Projeto_SD.vo
+vlog -work work projeto.vo
 vlog -work work comparadorSinal.vwf.vt
 vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comparadorSinal_vlg_vec_tst
-vcd file -direction Projeto_SD.msim.vcd
+vcd file -direction projeto.msim.vcd
 vcd add -internal comparadorSinal_vlg_vec_tst/*
 vcd add -internal comparadorSinal_vlg_vec_tst/i1/*
 proc simTimestamp {} {
@@ -23,10 +23,10 @@ quit -f
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
-vlog -work work Projeto_SD.vo
+vlog -work work projeto.vo
 vlog -work work comparadorSinal.vwf.vt
 vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.comparadorSinal_vlg_vec_tst
-vcd file -direction Projeto_SD.msim.vcd
+vcd file -direction projeto.msim.vcd
 vcd add -internal comparadorSinal_vlg_vec_tst/*
 vcd add -internal comparadorSinal_vlg_vec_tst/i1/*
 proc simTimestamp {} {
@@ -86,7 +86,7 @@ SIGNAL("A")
 	PARENT = "";
 }
 
-SIGNAL("A_0_B_1")
+SIGNAL("A0_B1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -96,7 +96,7 @@ SIGNAL("A_0_B_1")
 	PARENT = "";
 }
 
-SIGNAL("A_1_B_0")
+SIGNAL("A1_B0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -116,7 +116,7 @@ SIGNAL("B")
 	PARENT = "";
 }
 
-SIGNAL("IGUAIS_0")
+SIGNAL("Iguais_0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -126,43 +126,13 @@ SIGNAL("IGUAIS_0")
 	PARENT = "";
 }
 
-SIGNAL("IGUAIS_1")
+SIGNAL("Iguais_1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("IGUAL")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("MAIOR_A")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("MENOR_A")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
 	PARENT = "";
 }
 
@@ -171,14 +141,15 @@ TRANSITION_LIST("A")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 250.0;
-		LEVEL 1 FOR 250.0;
-		LEVEL 0 FOR 250.0;
-		LEVEL 1 FOR 250.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 800.0;
 	}
 }
 
-TRANSITION_LIST("A_0_B_1")
+TRANSITION_LIST("A0_B1")
 {
 	NODE
 	{
@@ -187,7 +158,7 @@ TRANSITION_LIST("A_0_B_1")
 	}
 }
 
-TRANSITION_LIST("A_1_B_0")
+TRANSITION_LIST("A1_B0")
 {
 	NODE
 	{
@@ -201,12 +172,13 @@ TRANSITION_LIST("B")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 500.0;
-		LEVEL 1 FOR 500.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 800.0;
 	}
 }
 
-TRANSITION_LIST("IGUAIS_0")
+TRANSITION_LIST("Iguais_0")
 {
 	NODE
 	{
@@ -215,45 +187,18 @@ TRANSITION_LIST("IGUAIS_0")
 	}
 }
 
-TRANSITION_LIST("IGUAIS_1")
+TRANSITION_LIST("Iguais_1")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("IGUAL")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("MAIOR_A")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("MENOR_A")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "IGUAL";
+	CHANNEL = "A";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -262,7 +207,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "MAIOR_A";
+	CHANNEL = "B";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -271,7 +216,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "MENOR_A";
+	CHANNEL = "A0_B1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -280,7 +225,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "A";
+	CHANNEL = "A1_B0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -289,7 +234,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "B";
+	CHANNEL = "Iguais_0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -298,37 +243,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "IGUAIS_0";
+	CHANNEL = "Iguais_1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "A_0_B_1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "A_1_B_0";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 7;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "IGUAIS_1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 8;
 	TREE_LEVEL = 0;
 }
 
