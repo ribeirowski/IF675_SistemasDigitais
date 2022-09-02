@@ -1,0 +1,264 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/21/2022 20:18:54"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Circuito_Completo
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Circuito_Completo_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [4:0] A;
+reg [4:0] B;
+reg [2:0] S;
+// wires                                               
+wire A_A1;
+wire A_A2;
+wire A_B1;
+wire A_B2;
+wire A_C1;
+wire A_C2;
+wire A_D1;
+wire A_D2;
+wire A_E1;
+wire A_E2;
+wire A_F1;
+wire A_F2;
+wire A_G1;
+wire A_G2;
+wire B_A1;
+wire B_A2;
+wire B_B1;
+wire B_B2;
+wire B_C1;
+wire B_C2;
+wire B_D1;
+wire B_D2;
+wire B_E1;
+wire B_E2;
+wire B_F1;
+wire B_F2;
+wire B_G1;
+wire B_G2;
+wire [4:0] F;
+wire F_A1;
+wire F_A2;
+wire F_B1;
+wire F_B2;
+wire F_C1;
+wire F_C2;
+wire F_D1;
+wire F_D2;
+wire F_E1;
+wire F_E2;
+wire F_F1;
+wire F_F2;
+wire F_G1;
+wire F_G2;
+wire Led;
+
+// assign statements (if any)                          
+Circuito_Completo i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.A_A1(A_A1),
+	.A_A2(A_A2),
+	.A_B1(A_B1),
+	.A_B2(A_B2),
+	.A_C1(A_C1),
+	.A_C2(A_C2),
+	.A_D1(A_D1),
+	.A_D2(A_D2),
+	.A_E1(A_E1),
+	.A_E2(A_E2),
+	.A_F1(A_F1),
+	.A_F2(A_F2),
+	.A_G1(A_G1),
+	.A_G2(A_G2),
+	.B(B),
+	.B_A1(B_A1),
+	.B_A2(B_A2),
+	.B_B1(B_B1),
+	.B_B2(B_B2),
+	.B_C1(B_C1),
+	.B_C2(B_C2),
+	.B_D1(B_D1),
+	.B_D2(B_D2),
+	.B_E1(B_E1),
+	.B_E2(B_E2),
+	.B_F1(B_F1),
+	.B_F2(B_F2),
+	.B_G1(B_G1),
+	.B_G2(B_G2),
+	.F(F),
+	.F_A1(F_A1),
+	.F_A2(F_A2),
+	.F_B1(F_B1),
+	.F_B2(F_B2),
+	.F_C1(F_C1),
+	.F_C2(F_C2),
+	.F_D1(F_D1),
+	.F_D2(F_D2),
+	.F_E1(F_E1),
+	.F_E2(F_E2),
+	.F_F1(F_F1),
+	.F_F2(F_F2),
+	.F_G1(F_G1),
+	.F_G2(F_G2),
+	.Led(Led),
+	.S(S)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// S[ 2 ]
+initial
+begin
+	S[2] = 1'b0;
+	S[2] = #600000 1'b1;
+end 
+// S[ 1 ]
+initial
+begin
+	S[1] = 1'b1;
+	S[1] = #100000 1'b0;
+	S[1] = #100000 1'b1;
+	S[1] = #200000 1'b0;
+	S[1] = #100000 1'b1;
+	S[1] = #100000 1'b0;
+	S[1] = #100000 1'b1;
+	S[1] = #100000 1'b0;
+	S[1] = #100000 1'b1;
+end 
+// S[ 0 ]
+initial
+begin
+	S[0] = 1'b1;
+	S[0] = #500000 1'b0;
+	S[0] = #100000 1'b1;
+	S[0] = #100000 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b0;
+	A[4] = #200000 1'b1;
+	A[4] = #100000 1'b0;
+	A[4] = #100000 1'b1;
+	A[4] = #100000 1'b0;
+	A[4] = #100000 1'b1;
+	A[4] = #200000 1'b0;
+end 
+// A[ 3 ]
+initial
+begin
+	A[3] = 1'b1;
+	A[3] = #200000 1'b0;
+	A[3] = #100000 1'b1;
+	A[3] = #200000 1'b0;
+	A[3] = #100000 1'b1;
+	A[3] = #100000 1'b0;
+	A[3] = #200000 1'b1;
+end 
+// A[ 2 ]
+initial
+begin
+	A[2] = 1'b0;
+	A[2] = #100000 1'b1;
+	A[2] = #100000 1'b0;
+	A[2] = #100000 1'b1;
+	A[2] = #100000 1'b0;
+	A[2] = #100000 1'b1;
+	A[2] = #100000 1'b0;
+	A[2] = #100000 1'b1;
+	A[2] = #100000 1'b0;
+	A[2] = #100000 1'b1;
+end 
+// A[ 1 ]
+initial
+begin
+	A[1] = 1'b1;
+	A[1] = #100000 1'b0;
+	A[1] = #300000 1'b1;
+end 
+// A[ 0 ]
+initial
+begin
+	A[0] = 1'b1;
+	A[0] = #200000 1'b0;
+	A[0] = #100000 1'b1;
+	A[0] = #200000 1'b0;
+	A[0] = #100000 1'b1;
+	A[0] = #100000 1'b0;
+	A[0] = #100000 1'b1;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b1;
+	B[4] = #100000 1'b0;
+	B[4] = #200000 1'b1;
+	B[4] = #300000 1'b0;
+	B[4] = #300000 1'b1;
+end 
+// B[ 3 ]
+initial
+begin
+	B[3] = 1'b0;
+	B[3] = #100000 1'b1;
+	B[3] = #300000 1'b0;
+	B[3] = #100000 1'b1;
+	B[3] = #400000 1'b0;
+end 
+// B[ 2 ]
+initial
+begin
+	B[2] = 1'b1;
+	B[2] = #100000 1'b0;
+	B[2] = #300000 1'b1;
+	B[2] = #100000 1'b0;
+	B[2] = #300000 1'b1;
+	B[2] = #100000 1'b0;
+end 
+// B[ 1 ]
+initial
+begin
+	B[1] = 1'b0;
+	B[1] = #200000 1'b1;
+	B[1] = #100000 1'b0;
+	B[1] = #100000 1'b1;
+	B[1] = #300000 1'b0;
+	B[1] = #200000 1'b1;
+end 
+// B[ 0 ]
+initial
+begin
+	B[0] = 1'b0;
+	B[0] = #200000 1'b1;
+	B[0] = #500000 1'b0;
+end 
+endmodule
+
