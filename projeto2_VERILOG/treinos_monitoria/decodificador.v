@@ -1,0 +1,27 @@
+module decodificador(number, display);
+
+input [3:0] number;
+output reg [0:13] display;
+
+always @ (number) begin
+	case (number)
+		1: display <= 14'b00000011001111;
+		2: display <= 14'b00000010010010;
+		3: display <= 14'b00000010000110;
+		4: display <= 14'b00000011001100;
+		5: display <= 14'b00000010100100;
+		6: display <= 14'b00000010100000;
+		7: display <= 14'b00000010001101;
+		8: display <= 14'b00000010000000;
+		9: display <= 14'b00000010000100;
+		10: display <= 14'b10011110000001;
+		11: display <= 14'b10011111001111;
+		12: display <= 14'b10011110010010;
+		13: display <= 14'b10011110000110;
+		14: display <= 14'b10011111001100;
+		15: display <= 14'b10011110100100;
+		default: display <= 14'b00000010000001;
+	endcase
+end
+
+endmodule
