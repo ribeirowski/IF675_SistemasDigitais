@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_115_IR">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_IR|pll1:u0|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

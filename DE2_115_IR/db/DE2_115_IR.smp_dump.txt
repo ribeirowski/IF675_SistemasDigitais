@@ -1,0 +1,6 @@
+
+State Machine - |DE2_115_IR|IR_RECEIVE:u1|state
+Name state.IDLE state.DATAREAD state.GUIDANCE 
+state.IDLE 0 0 0 
+state.GUIDANCE 1 0 1 
+state.DATAREAD 1 1 0 
