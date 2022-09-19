@@ -9,3 +9,7 @@
 * <p align="justify">A unidade lógica e aritmética deverá ser capaz de executar as seguintes operações, que serão selecionadas a partir dos códigos da tabela abaixo:
 
 <img src="https://github.com/ribeirowski/projeto_SD/blob/main/imagens/operacoes_ula.png" alt="drawing" width="300" align="center"/>
+
+<br>
+
+**PROJETO II** - Implementação de uma **Calculadora e Sensor de Infravermelho (IR)**
