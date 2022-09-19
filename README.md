@@ -1,6 +1,6 @@
-# Projeto de Sistemas Digitais (IF675)
+# Projetos de Sistemas Digitais (IF675)
 
-Implementação de uma **Unidade Lógica e Aritmética (ULA)**
+**PROJETO I** - Implementação de uma **Unidade Lógica e Aritmética (ULA)**
 
 * <p align="justify">O projeto da ULA precisa ser acoplado a um decodificador binário para display de sete segmentos que também será desenvolvido.
 * <p align="justify">Este projeto da primeira unidade deve ser  desenvolvido totalmente baseado em portas lógicas.
