@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Oct 07 11:11:42 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Calculadora
+Top-level Entity Name : Calculadora
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 1,483 / 114,480 ( 1 % )
+    Total combinational functions : 1,460 / 114,480 ( 1 % )
+    Dedicated logic registers : 127 / 114,480 ( < 1 % )
+Total registers : 127
+Total pins : 76 / 529 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 0 / 3,981,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 1 / 532 ( < 1 % )
+Total PLLs : 0 / 4 ( 0 % )

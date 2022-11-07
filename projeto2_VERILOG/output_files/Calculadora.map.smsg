@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at InfraRed.v(6): object "Data" differs only in case from object "data" in the same scope File: C:/Users/enior/Desktop/Projeto2-SD/InfraRed.v Line: 6
+Info (10281): Verilog HDL Declaration information at Calculadora.v(3): object "B1" differs only in case from object "b1" in the same scope File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 3
+Info (10281): Verilog HDL Declaration information at Calculadora.v(3): object "B2" differs only in case from object "b2" in the same scope File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 3
+Info (10281): Verilog HDL Declaration information at Calculadora.v(3): object "B3" differs only in case from object "b3" in the same scope File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 3
+Info (10281): Verilog HDL Declaration information at Calculadora.v(3): object "B4" differs only in case from object "b4" in the same scope File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 3

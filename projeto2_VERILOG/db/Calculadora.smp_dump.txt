@@ -1,0 +1,6 @@
+
+State Machine - |Calculadora|InfraRed:IR|state
+Name state.Inicio state.Leia state.Espera 
+state.Inicio 0 0 0 
+state.Espera 1 0 1 
+state.Leia 1 1 0 

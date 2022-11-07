@@ -1,0 +1,1399 @@
+Analysis & Synthesis report for Calculadora
+Fri Oct 07 11:11:26 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |Calculadora|InfraRed:IR|state
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |Calculadora
+ 15. Parameter Settings for User Entity Instance: Seletor:select
+ 16. Parameter Settings for User Entity Instance: InfraRed:IR
+ 17. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div1
+ 20. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod1
+ 21. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div5
+ 23. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div2
+ 24. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod5
+ 25. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div6
+ 26. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod2
+ 27. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div3
+ 28. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div4
+ 29. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod6
+ 30. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div7
+ 31. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod3
+ 32. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod4
+ 33. Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod7
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "InfraRed:IR"
+ 36. Port Connectivity Checks: "Seletor:select|Display:UniN2"
+ 37. Port Connectivity Checks: "Seletor:select|Display:DecN2"
+ 38. Port Connectivity Checks: "Seletor:select|Display:UniN1"
+ 39. Port Connectivity Checks: "Seletor:select|Display:DecN1"
+ 40. Port Connectivity Checks: "Seletor:select|Display:UniR"
+ 41. Port Connectivity Checks: "Seletor:select|Display:DecR"
+ 42. Port Connectivity Checks: "Seletor:select|Display:CentR"
+ 43. Port Connectivity Checks: "Seletor:select|Display:MilR"
+ 44. Post-Synthesis Netlist Statistics for Top Partition
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
+ 47. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 07 11:11:26 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Calculadora                                 ;
+; Top-level Entity Name              ; Calculadora                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,492                                       ;
+;     Total combinational functions  ; 1,460                                       ;
+;     Dedicated logic registers      ; 127                                         ;
+; Total registers                    ; 127                                         ;
+; Total pins                         ; 76                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 1                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; Calculadora        ; Calculadora        ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; InfraRed.v                       ; yes             ; User Verilog HDL File        ; C:/Users/enior/Desktop/Projeto2-SD/InfraRed.v                              ;         ;
+; Calculadora.v                    ; yes             ; User Verilog HDL File        ; C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v                           ;         ;
+; Display.v                        ; yes             ; User Verilog HDL File        ; C:/Users/enior/Desktop/Projeto2-SD/Display.v                               ;         ;
+; Seletor.v                        ; yes             ; User Verilog HDL File        ; C:/Users/enior/Desktop/Projeto2-SD/Seletor.v                               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_ihm.tdf                   ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_akh.tdf              ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_84f.tdf                    ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/add_sub_7pc.tdf                      ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/add_sub_8pc.tdf                      ;         ;
+; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_l9m.tdf                   ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_6at.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/mult_6at.tdf                         ;         ;
+; db/lpm_divide_dkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_dkm.tdf                   ;         ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_5nh.tdf              ;         ;
+; db/alt_u_div_u9f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_u9f.tdf                    ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_mhm.tdf                   ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_ekh.tdf              ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_g4f.tdf                    ;         ;
+; db/lpm_divide_gcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_gcm.tdf                   ;         ;
+; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_vim.tdf                   ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_nlh.tdf              ;         ;
+; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_27f.tdf                    ;         ;
+; db/lpm_divide_p9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_p9m.tdf                   ;         ;
+; db/lpm_divide_0jm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_0jm.tdf                   ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_olh.tdf              ;         ;
+; db/alt_u_div_47f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_47f.tdf                    ;         ;
+; db/lpm_divide_6bm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_6bm.tdf                   ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_rlh.tdf              ;         ;
+; db/alt_u_div_a7f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_a7f.tdf                    ;         ;
+; db/lpm_divide_3bm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_3bm.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                  ;
++---------------------------------------------+----------------------------------------------------------------+
+; Resource                                    ; Usage                                                          ;
++---------------------------------------------+----------------------------------------------------------------+
+; Estimated Total logic elements              ; 1,492                                                          ;
+;                                             ;                                                                ;
+; Total combinational functions               ; 1460                                                           ;
+; Logic element usage by number of LUT inputs ;                                                                ;
+;     -- 4 input functions                    ; 427                                                            ;
+;     -- 3 input functions                    ; 406                                                            ;
+;     -- <=2 input functions                  ; 627                                                            ;
+;                                             ;                                                                ;
+; Logic elements by mode                      ;                                                                ;
+;     -- normal mode                          ; 1033                                                           ;
+;     -- arithmetic mode                      ; 427                                                            ;
+;                                             ;                                                                ;
+; Total registers                             ; 127                                                            ;
+;     -- Dedicated logic registers            ; 127                                                            ;
+;     -- I/O registers                        ; 0                                                              ;
+;                                             ;                                                                ;
+; I/O pins                                    ; 76                                                             ;
+;                                             ;                                                                ;
+; Embedded Multiplier 9-bit elements          ; 1                                                              ;
+;                                             ;                                                                ;
+; Maximum fan-out node                        ; Seletor:select|lpm_mult:Mult0|mult_6at:auto_generated|mac_out2 ;
+; Maximum fan-out                             ; 127                                                            ;
+; Total fan-out                               ; 4640                                                           ;
+; Average fan-out                             ; 2.67                                                           ;
++---------------------------------------------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                     ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Calculadora                              ; 1460 (57)           ; 127 (12)                  ; 0           ; 1            ; 1       ; 0         ; 76   ; 0            ; |Calculadora                                                                                                                ; Calculadora         ; work         ;
+;    |InfraRed:IR|                          ; 131 (131)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|InfraRed:IR                                                                                                    ; InfraRed            ; work         ;
+;    |Seletor:select|                       ; 1272 (137)          ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select                                                                                                 ; Seletor             ; work         ;
+;       |Display:CentR|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:CentR                                                                                   ; Display             ; work         ;
+;       |Display:DecN1|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:DecN1                                                                                   ; Display             ; work         ;
+;       |Display:DecN2|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:DecN2                                                                                   ; Display             ; work         ;
+;       |Display:DecR|                      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:DecR                                                                                    ; Display             ; work         ;
+;       |Display:MilR|                      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:MilR                                                                                    ; Display             ; work         ;
+;       |Display:UniN1|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:UniN1                                                                                   ; Display             ; work         ;
+;       |Display:UniN2|                     ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:UniN2                                                                                   ; Display             ; work         ;
+;       |Display:UniR|                      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|Display:UniR                                                                                    ; Display             ; work         ;
+;       |lpm_divide:Div0|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Div1|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div1|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Div2|                   ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_mhm:auto_generated|  ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div2|lpm_divide_mhm:auto_generated                                                   ; lpm_divide_mhm      ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div2|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh ; work         ;
+;                |alt_u_div_g4f:divider|    ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div2|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider ; alt_u_div_g4f       ; work         ;
+;       |lpm_divide:Div3|                   ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div3|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div3|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Div4|                   ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_0jm:auto_generated|  ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div4|lpm_divide_0jm:auto_generated                                                   ; lpm_divide_0jm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div4|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_47f:divider|    ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div4|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ; alt_u_div_47f       ; work         ;
+;       |lpm_divide:Div5|                   ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_dkm:auto_generated|  ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div5|lpm_divide_dkm:auto_generated                                                   ; lpm_divide_dkm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div5|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_u9f:divider|    ; 123 (123)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div5|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
+;       |lpm_divide:Div6|                   ; 72 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div6                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vim:auto_generated|  ; 72 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div6|lpm_divide_vim:auto_generated                                                   ; lpm_divide_vim      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 72 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div6|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_27f:divider|    ; 72 (72)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div6|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
+;       |lpm_divide:Div7|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div7                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div7|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div7|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Div7|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod0|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod1|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod1|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod1|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod2|                   ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_p9m:auto_generated|  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod2|lpm_divide_p9m:auto_generated                                                   ; lpm_divide_p9m      ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod2|lpm_divide_p9m:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh ; work         ;
+;                |alt_u_div_g4f:divider|    ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod2|lpm_divide_p9m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider ; alt_u_div_g4f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod3|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod4|                   ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_3bm:auto_generated|  ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod4|lpm_divide_3bm:auto_generated                                                   ; lpm_divide_3bm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 80 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod4|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_47f:divider|    ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod4|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ; alt_u_div_47f       ; work         ;
+;       |lpm_divide:Mod5|                   ; 145 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_gcm:auto_generated|  ; 145 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod5|lpm_divide_gcm:auto_generated                                                   ; lpm_divide_gcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 145 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod5|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_u9f:divider|    ; 145 (145)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod5|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
+;       |lpm_divide:Mod6|                   ; 149 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod6                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_6bm:auto_generated|  ; 149 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod6|lpm_divide_6bm:auto_generated                                                   ; lpm_divide_6bm      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 149 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod6|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_a7f:divider|    ; 149 (149)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod6|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; alt_u_div_a7f       ; work         ;
+;       |lpm_divide:Mod7|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod7                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod7|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod7|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_divide:Mod7|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_mult:Mult0|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_mult:Mult0                                                                                  ; lpm_mult            ; work         ;
+;          |mult_6at:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Calculadora|Seletor:select|lpm_mult:Mult0|mult_6at:auto_generated                                                          ; mult_6at            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 1           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |Calculadora|InfraRed:IR|state          ;
++--------------+--------------+------------+--------------+
+; Name         ; state.Inicio ; state.Leia ; state.Espera ;
++--------------+--------------+------------+--------------+
+; state.Inicio ; 0            ; 0          ; 0            ;
+; state.Espera ; 1            ; 0          ; 1            ;
+; state.Leia   ; 1            ; 1          ; 0            ;
++--------------+--------------+------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Seletor:select|N1Dec[0]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Dec[1]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Dec[2]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Dec[3]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Uni[0]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Uni[1]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Uni[2]                             ; VCC                 ; yes                    ;
+; Seletor:select|N1Uni[3]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Dec[0]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Dec[1]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Dec[2]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Dec[3]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Uni[0]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Uni[1]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Uni[2]                             ; VCC                 ; yes                    ;
+; Seletor:select|N2Uni[3]                             ; VCC                 ; yes                    ;
+; Seletor:select|OperMil[0]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperMil[1]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperMil[2]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperMil[3]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperCent[0]                          ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperCent[1]                          ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperCent[2]                          ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperCent[3]                          ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperDec[0]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperDec[1]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperDec[2]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperDec[3]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperUni[3]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperUni[2]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperUni[1]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|OperUni[0]                           ; Seletor:select|Mux1 ; yes                    ;
+; Seletor:select|Num1[6]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[6]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[5]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[5]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[4]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[4]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[3]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[3]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[2]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[2]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[1]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[1]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num1[0]                              ; Equal7              ; yes                    ;
+; Seletor:select|Num2[0]                              ; Equal7              ; yes                    ;
+; Number of user-specified and inferred latches = 46  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 127   ;
+; Number of registers using Synchronous Clear  ; 76    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 99    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 38    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Reset                                  ; 101     ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Calculadora|InfraRed:IR|bitcount[0] ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; Yes        ; |Calculadora|Estado[1]               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |Calculadora|Seletor:select|Mux14    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |Calculadora|Seletor:select|Mux10    ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; No         ; |Calculadora|Seletor:select|Mux0     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Calculadora|InfraRed:IR|Selector2   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Calculadora ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; Off            ; 0     ; Signed Integer                                     ;
+; Soma           ; 1     ; Signed Integer                                     ;
+; Sub            ; 2     ; Signed Integer                                     ;
+; Mult           ; 3     ; Signed Integer                                     ;
+; On             ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Seletor:select ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; Off            ; 0     ; Signed Integer                     ;
+; Soma           ; 1     ; Signed Integer                     ;
+; Sub            ; 2     ; Signed Integer                     ;
+; Mult           ; 3     ; Signed Integer                     ;
+; On             ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InfraRed:IR ;
++------------------+--------+------------------------------+
+; Parameter Name   ; Value  ; Type                         ;
++------------------+--------+------------------------------+
+; Inicio           ; 00     ; Unsigned Binary              ;
+; Espera           ; 01     ; Unsigned Binary              ;
+; Leia             ; 10     ; Unsigned Binary              ;
+; Inicio_Maior_Dur ; 262143 ; Signed Integer               ;
+; Espera_Menor_Dur ; 230000 ; Signed Integer               ;
+; Espera_Maior_Dur ; 210000 ; Signed Integer               ;
+; Data_Maior_Dur   ; 41500  ; Signed Integer               ;
++------------------+--------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_mult:Mult0      ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 7            ; Untyped             ;
+; LPM_WIDTHB                                     ; 7            ; Untyped             ;
+; LPM_WIDTHP                                     ; 14           ; Untyped             ;
+; LPM_WIDTHR                                     ; 14           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_6at     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div5 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_dkm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div2 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod5 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_gcm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div6 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_vim ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod2 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_p9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div3 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div4 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_0jm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod6 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_6bm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Div7 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod3 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod4 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_3bm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Seletor:select|lpm_divide:Mod7 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                        ;
++---------------------------------------+-------------------------------+
+; Name                                  ; Value                         ;
++---------------------------------------+-------------------------------+
+; Number of entity instances            ; 1                             ;
+; Entity Instance                       ; Seletor:select|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 7                             ;
+;     -- LPM_WIDTHB                     ; 7                             ;
+;     -- LPM_WIDTHP                     ; 14                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                            ;
+;     -- USE_EAB                        ; OFF                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                            ;
++---------------------------------------+-------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InfraRed:IR"                                                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Data[15..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:UniN2"                                                                                                                     ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:DecN2"                                                                                                                     ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:UniN1"                                                                                                                     ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:DecN1"                                                                                                                     ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:UniR"                                                                                                                      ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:DecR"                                                                                                                      ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:CentR"                                                                                                                     ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seletor:select|Display:MilR"                                                                                                                      ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                          ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; number ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (14 bits) it drives.  Extra input bit(s) "number[13..4]" will be connected to GND. ;
++--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 76                          ;
+; cycloneiii_ff         ; 127                         ;
+;     CLR               ; 7                           ;
+;     CLR SCLR          ; 70                          ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 16                          ;
+;     ENA CLR SCLR      ; 6                           ;
+;     plain             ; 12                          ;
+; cycloneiii_lcell_comb ; 1468                        ;
+;     arith             ; 427                         ;
+;         2 data inputs ; 103                         ;
+;         3 data inputs ; 324                         ;
+;     normal            ; 1041                        ;
+;         0 data inputs ; 75                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 445                         ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 427                         ;
+; cycloneiii_mac_mult   ; 1                           ;
+; cycloneiii_mac_out    ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 33.20                       ;
+; Average LUT depth     ; 17.11                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Oct 07 11:11:15 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
+Warning (125092): Tcl Script File pll1.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE pll1.qip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (12019): Can't analyze file -- file DE2_115_IR.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file infrared.v
+    Info (12023): Found entity 1: InfraRed File: C:/Users/enior/Desktop/Projeto2-SD/InfraRed.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file calculadora.v
+    Info (12023): Found entity 1: Calculadora File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file display.v
+    Info (12023): Found entity 1: Display File: C:/Users/enior/Desktop/Projeto2-SD/Display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file seletor.v
+    Info (12023): Found entity 1: Seletor File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 1
+Info (12127): Elaborating entity "Calculadora" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(7): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 7
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(82): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 82
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(87): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 87
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(90): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 90
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(93): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 93
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(96): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 96
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(101): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 101
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(104): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 104
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(107): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 107
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(110): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 110
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(115): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 115
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(118): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 118
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(121): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 121
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(124): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 124
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(129): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 129
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(132): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 132
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(135): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 135
+Warning (10230): Verilog HDL assignment warning at Calculadora.v(138): truncated value with size 32 to match size of target (3) File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 138
+Info (12128): Elaborating entity "Seletor" for hierarchy "Seletor:select" File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 144
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(13): variable "Estado" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 13
+Warning (10230): Verilog HDL assignment warning at Seletor.v(22): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 22
+Warning (10230): Verilog HDL assignment warning at Seletor.v(23): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Seletor.v(34): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 34
+Warning (10230): Verilog HDL assignment warning at Seletor.v(35): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 35
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "Num1", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "N1Dec", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "N1Uni", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "Num2", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "N2Dec", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(11): inferring latch(es) for variable "N2Uni", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(62): variable "Num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 62
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(62): variable "Num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 62
+Warning (10230): Verilog HDL assignment warning at Seletor.v(64): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 64
+Warning (10230): Verilog HDL assignment warning at Seletor.v(65): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 65
+Warning (10230): Verilog HDL assignment warning at Seletor.v(66): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 66
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(70): variable "Num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 70
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(70): variable "Num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 70
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(72): variable "Num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 72
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(72): variable "Num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 72
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(76): variable "Num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 76
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(76): variable "Num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 76
+Warning (10230): Verilog HDL assignment warning at Seletor.v(78): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 78
+Warning (10230): Verilog HDL assignment warning at Seletor.v(79): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 79
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(82): variable "Num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 82
+Warning (10235): Verilog HDL Always Construct warning at Seletor.v(82): variable "Num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 82
+Warning (10230): Verilog HDL assignment warning at Seletor.v(83): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 83
+Warning (10230): Verilog HDL assignment warning at Seletor.v(84): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+Warning (10230): Verilog HDL assignment warning at Seletor.v(85): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 85
+Warning (10230): Verilog HDL assignment warning at Seletor.v(86): truncated value with size 32 to match size of target (4) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 86
+Warning (10270): Verilog HDL Case Statement warning at Seletor.v(48): incomplete case statement has no default case item File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 48
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(47): inferring latch(es) for variable "OperMil", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(47): inferring latch(es) for variable "OperCent", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(47): inferring latch(es) for variable "OperDec", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(47): inferring latch(es) for variable "OperUni", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at Seletor.v(47): inferring latch(es) for variable "Resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperUni[0]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperUni[1]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperUni[2]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperUni[3]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperDec[0]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperDec[1]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperDec[2]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperDec[3]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperCent[0]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperCent[1]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperCent[2]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperCent[3]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperMil[0]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperMil[1]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperMil[2]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "OperMil[3]" at Seletor.v(47) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+Info (10041): Inferred latch for "N2Uni[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Uni[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Uni[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Uni[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Dec[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Dec[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Dec[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N2Dec[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[4]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[5]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num2[6]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Uni[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Uni[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Uni[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Uni[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Dec[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Dec[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Dec[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "N1Dec[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[0]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[1]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[2]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[3]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[4]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[5]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (10041): Inferred latch for "Num1[6]" at Seletor.v(39) File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 39
+Info (12128): Elaborating entity "Display" for hierarchy "Seletor:select|Display:MilR" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 91
+Info (12128): Elaborating entity "InfraRed" for hierarchy "InfraRed:IR" File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 146
+Info (278001): Inferred 17 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div1" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod1" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 35
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Seletor:select|Mult0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 82
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div5" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 83
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div2" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 64
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod5" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div6" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod2" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 66
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div3" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 65
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div4" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 78
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod6" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 86
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Div7" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 85
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod3" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 66
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod4" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 79
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Seletor:select|Mod7" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 86
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Div0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 22
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Div0" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 22
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
+    Info (12023): Found entity 1: lpm_divide_ihm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_ihm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_akh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
+    Info (12023): Found entity 1: alt_u_div_84f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_84f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/enior/Desktop/Projeto2-SD/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/enior/Desktop/Projeto2-SD/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Mod0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 23
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Mod0" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l9m.tdf
+    Info (12023): Found entity 1: lpm_divide_l9m File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_l9m.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_mult:Mult0" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 82
+Info (12133): Instantiated megafunction "Seletor:select|lpm_mult:Mult0" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 82
+    Info (12134): Parameter "LPM_WIDTHA" = "7"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "14"
+    Info (12134): Parameter "LPM_WIDTHR" = "14"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_6at.tdf
+    Info (12023): Found entity 1: mult_6at File: C:/Users/enior/Desktop/Projeto2-SD/db/mult_6at.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Div5" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 83
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Div5" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 83
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dkm.tdf
+    Info (12023): Found entity 1: lpm_divide_dkm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_dkm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_5nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u9f.tdf
+    Info (12023): Found entity 1: alt_u_div_u9f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_u9f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Div2" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 64
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Div2" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 64
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
+    Info (12023): Found entity 1: lpm_divide_mhm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_mhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_ekh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
+    Info (12023): Found entity 1: alt_u_div_g4f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_g4f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Mod5" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Mod5" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gcm.tdf
+    Info (12023): Found entity 1: lpm_divide_gcm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_gcm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Div6" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Div6" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 84
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vim.tdf
+    Info (12023): Found entity 1: lpm_divide_vim File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_vim.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_nlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
+    Info (12023): Found entity 1: alt_u_div_27f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_27f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Mod2" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 66
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Mod2" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 66
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_p9m.tdf
+    Info (12023): Found entity 1: lpm_divide_p9m File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_p9m.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Div4" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 78
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Div4" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 78
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_0jm.tdf
+    Info (12023): Found entity 1: lpm_divide_0jm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_0jm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_olh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_47f.tdf
+    Info (12023): Found entity 1: alt_u_div_47f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_47f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Mod6" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 86
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Mod6" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 86
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_6bm.tdf
+    Info (12023): Found entity 1: lpm_divide_6bm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_6bm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/enior/Desktop/Projeto2-SD/db/sign_div_unsign_rlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a7f.tdf
+    Info (12023): Found entity 1: alt_u_div_a7f File: C:/Users/enior/Desktop/Projeto2-SD/db/alt_u_div_a7f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Seletor:select|lpm_divide:Mod4" File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 79
+Info (12133): Instantiated megafunction "Seletor:select|lpm_divide:Mod4" with the following parameter: File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 79
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3bm.tdf
+    Info (12023): Found entity 1: lpm_divide_3bm File: C:/Users/enior/Desktop/Projeto2-SD/db/lpm_divide_3bm.tdf Line: 25
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch Seletor:select|OperMil[0] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperMil[1] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperMil[2] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperMil[3] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperCent[0] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperCent[1] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[0] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperCent[2] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperCent[3] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[0] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperDec[0] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperDec[1] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperDec[2] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperDec[3] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperUni[3] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperUni[2] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperUni[1] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Warning (13012): Latch Seletor:select|OperUni[0] has unsafe behavior File: C:/Users/enior/Desktop/Projeto2-SD/Seletor.v Line: 47
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Estado[1] File: C:/Users/enior/Desktop/Projeto2-SD/Calculadora.v Line: 78
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/enior/Desktop/Projeto2-SD/output_files/Calculadora.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1573 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 1496 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Fri Oct 07 11:11:26 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:09
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/enior/Desktop/Projeto2-SD/output_files/Calculadora.map.smsg.
+
+
