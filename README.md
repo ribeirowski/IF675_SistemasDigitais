@@ -13,3 +13,5 @@
 <br>
 
 **PROJETO II** - Implementação de uma **Calculadora e Sensor de Infravermelho (IR)**
+
+* <p align="justify">O projeto será a construção de uma calculadora utilizando os displays de 7 segmentos, com os números sendo colocados bit a bit através dos switches, e as operações sendo mapeadas nos Push buttons. Também deverá ser possível usar o sensor de infravermelho e o controle disponível na placa para realizar as operações.
